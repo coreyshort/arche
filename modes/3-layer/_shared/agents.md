@@ -183,10 +183,10 @@ The issue will be automatically labeled based on category and priority. You do N
 Approved improvements are incorporated via automated PR creation from GitHub Issues. They update template files at https://github.com/coreyshort/arche but do not directly update files for the current project.
 
 \*\*Bootstrapping New Projects:\*\*
-To initialize a new project from templates, use the bootstrap tool from arche:
+To initialize a new project from templates, use the bootstrap script from arche:
 \`\`\`bash
-\# Download bootstrap tool
-curl -O https://raw.githubusercontent.com/coreyshort/arche/main/tools/bootstrap.py
+\# Download bootstrap script
+curl -O https://raw.githubusercontent.com/coreyshort/arche/main/scripts/bootstrap.py
 
 \# Interactive mode (recommended)
 python bootstrap.py --interactive
@@ -214,7 +214,7 @@ python bootstrap.py --list
 \*\*Arche repository structure (https://github.com/coreyshort/arche):\*\*
 \- \`modes/\` \- Architectural paradigms (3-layer, agentic-swarm, event-driven, rl-loop)
   \- Each mode has: MODE.md (documentation), INSTRUCTIONS.md (AI config), \_shared/ (common files), forms/ (project templates)
-\- \`tools/\` \- Utilities for interacting with arche (bootstrap.py, validators)
+\- \`scripts/\` \- Arche management scripts (bootstrap.py, update_arche.py)
 \- \`examples/\` \- AI configuration examples, prompts, single-line setups
 \- \`.github/\` \- Issue templates, workflows, contribution guides
 \- Root: README.md, MODE_MATURITY.md, MODE_SELECTION.md, AUTONOMOUS_MODE_SELECTION.md, TELEMETRY.md

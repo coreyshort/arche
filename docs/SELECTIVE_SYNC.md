@@ -185,7 +185,7 @@ A: Reference its MODE.md via URL. AI agents can read URLs without copying files.
 A: Not recommended. It creates confusion and mixing paradigms. Bootstrap a separate project instead.
 
 **Q: What if a mode needs cross-mode utilities?**  
-A: Put them in that mode's `_shared/` directory or create a `tools/` subdirectory within the mode.
+A: Put them in that mode's `_shared/` directory or create a `utilities/` subdirectory within the mode.
 
 **Q: How do updates to arche affect my project?**  
 A: Your project files are static. Reference documentation via URLs to see latest. Manually update if needed.

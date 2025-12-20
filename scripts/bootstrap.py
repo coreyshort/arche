@@ -144,7 +144,9 @@ def initialize_project(
     target_dir: Path,
     project_name: Optional[str] = None,
     branch: str = "main",
-    enable_telemetry: Optional[bool] = None
+    enable_telemetry: Optional[bool] = None,
+    update_strategy: str = "auto",
+    update_interval: Optional[int] = None
 ) -> bool:
     """
     Initialize a new project from a mode/form.
@@ -229,6 +231,34 @@ def initialize_project(
                 gitignore_file.write_text(gitignore_content.rstrip() + "\n.arche-telemetry\n")
         else:
             gitignore_file.write_text(".arche-telemetry\n")
+    
+    # Create update config
+    config_data = {
+        "update_strategy": update_strategy,
+        "mode": mode,
+        "form": form,
+        "arche_version": branch,
+        "branch": branch,
+        "created_at": datetime.now().strftime("%Y-%m-%d"),
+        "telemetry_enabled": enable_telemetry if enable_telemetry is not None else False
+    }
+    
+    if update_strategy == "prompt" and update_interval:
+        config_data["update_check_interval_days"] = update_interval
+        config_data["last_update_check"] = datetime.now().strftime("%Y-%m-%d")
+    
+    config_file = target_dir / ".arche-config"
+    config_file.write_text(json.dumps(config_data, indent=2))
+    print(f"  ✓ Created .arche-config (update strategy: {update_strategy})")
+    
+    # Ensure .arche-config is in .gitignore
+    gitignore_file = target_dir / ".gitignore"
+    if gitignore_file.exists():
+        gitignore_content = gitignore_file.read_text()
+        if ".arche-config" not in gitignore_content:
+            gitignore_file.write_text(gitignore_content.rstrip() + "\n.arche-config\n.arche-backups/\n.arche-update.log\n")
+    else:
+        gitignore_file.write_text(".arche-config\n.arche-backups/\n.arche-update.log\n")
     
     # Summary
     total_files = shared_count + form_count

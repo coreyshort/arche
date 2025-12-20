@@ -174,7 +174,7 @@ The AI will:
 
 ```bash
 # Download bootstrap script
-curl -O https://raw.githubusercontent.com/coreyshort/arche/main/tools/bootstrap.py
+curl -O https://raw.githubusercontent.com/coreyshort/arche/main/scripts/bootstrap.py
 
 # Interactive setup
 python bootstrap.py --interactive
