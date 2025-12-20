@@ -25,7 +25,9 @@ From this foundation emerge modes: the fundamental ways agency comes into being.
 Within each mode, forms take shape as concrete realizations in code and behavior. Forms adapt a mode to particular problems, environments, or constraints, while remaining faithful to the underlying expression of agency.
 
 arche
+
  └─ modes
+
      └─ forms
 
 arche endures beneath all expression. Modes reveal how agency may be. Forms give that possibility shape.
