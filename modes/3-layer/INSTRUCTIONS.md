@@ -101,6 +101,11 @@ When you discover improvements (better patterns, missing features, edge cases), 
 - **Suggested Commit Message:** Conventional format (feat/fix/docs/refactor/marketing)
 - **Testing Steps:** How to validate
 
+**For AI Agents:** You can create issues programmatically using the GitHub API. See https://github.com/coreyshort/arche/blob/main/.github/AGENT_ACCESS.md for setup instructions, including:
+- How to get a GitHub Personal Access Token
+- Python script to create issues: `.github/create_issue.py`
+- Example: `python .github/create_issue.py --title "Better validation" --mode "3-layer" --category "bootstrap" --priority "medium" --problem "..." --solution "..."`
+
 **Improvement types aren't just code:**
 - Technical: Code quality, architecture, features, bug fixes
 - Documentation: README clarity, examples, setup guides

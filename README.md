@@ -237,6 +237,8 @@ Include:
 - Proposed solution with implementation details
 - Testing approach
 
+**For AI Agents:** See [.github/AGENT_ACCESS.md](.github/AGENT_ACCESS.md) for how to programmatically create issues using GitHub tokens.
+
 **Optional:** Include anonymous telemetry (project type, team size) to help prioritize improvements. See [TELEMETRY.md](TELEMETRY.md).
 
 ### Proposing New Modes
