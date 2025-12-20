@@ -2,10 +2,26 @@
 
 Follow the arche framework for reliable AI-assisted development.
 
-For 3-layer mode projects:
+## Choose Your Mode
+
+Arche supports multiple architectural modes. Choose based on your project:
+
+**For most projects (mature, proven):**
 https://raw.githubusercontent.com/coreyshort/arche/main/modes/3-layer/INSTRUCTIONS.md
 
-## Quick Reference
+**For multi-agent systems (emerging):**
+https://raw.githubusercontent.com/coreyshort/arche/main/modes/agentic-swarm/MODE.md
+
+**For event-driven systems (emerging):**
+https://raw.githubusercontent.com/coreyshort/arche/main/modes/event-driven/MODE.md
+
+**For learning agents (emerging):**
+https://raw.githubusercontent.com/coreyshort/arche/main/modes/rl-loop/MODE.md
+
+**Not sure? Let AI decide:**
+https://raw.githubusercontent.com/coreyshort/arche/main/AUTONOMOUS_MODE_SELECTION.md
+
+## Quick Reference (3-Layer Mode)
 
 - **Layer 1 (Directives):** Read `directives/*.md` to understand what to do
 - **Layer 2 (Orchestration):** You make intelligent decisions and route between tools
