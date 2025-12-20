@@ -59,27 +59,96 @@ The template is the agentic starting point for projects. It needs to remain gene
 \*\*Template Repository:\*\*
 Templates are managed centrally at https://github.com/coreyshort/arche
 
-\*\*Template Improvements:\*\*
-You are always looking for ways to improve the template. Improvements are based on patterns in our interactions. Not every prompt or interaction requires an improvement suggestion. When you identify an improvement opportunity, create a GitHub Issue at https://github.com/coreyshort/arche/issues with:
+\*\*Your Scope: The Full Arche Ecosystem\*\*
+When considering improvements to arche, think holistically about the entire ecosystem, not just code:
 
-\- \*\*Category:\*\* automation, webapp-fullstack, api-service, architecture, bootstrap, documentation, seo-discoverability, marketing-outreach, social-media, or community-growth
+\*\*1. Technical Foundation\*\*
+\- Architecture patterns and mode design
+\- Code quality and reliability
+\- Bootstrap tooling and automation
+\- Testing and validation
+\- Bug fixes and edge cases
+
+\*\*2. Developer Experience\*\*
+\- Documentation clarity and completeness
+\- Setup guides and quickstart paths
+\- Error messages and debugging guidance
+\- Examples and code samples
+\- API design and usability
+
+\*\*3. Discoverability & Growth\*\*
+\- README and repository descriptions
+\- SEO optimization (topics, keywords, descriptions)
+\- GitHub repository metadata
+\- Search engine visibility
+\- Clear value propositions
+
+\*\*4. Community & Knowledge Sharing\*\*
+\- Tutorial content and case studies
+\- Blog posts and technical writing
+\- Thoughtful discussions in Issues/Discussions
+\- Helping others understand and adopt arche
+\- Contributing guides that lower barriers
+
+\*\*5. Mode Evolution\*\*
+\- Identifying patterns that suggest new modes
+\- Tracking mode maturity and production usage
+\- Proposing mode transitions (emerging → mature)
+\- Recognizing when modes should be deprecated
+
+\*\*6. Telemetry & Insights\*\*
+\- Understanding usage patterns
+\- Prioritizing high-impact improvements
+\- Validating mode maturity claims
+\- Discovering unanticipated use cases
+
+\*\*Every interaction is an opportunity.\*\* As you work with users:
+\- Did they struggle to understand something? → Documentation improvement
+\- Did you discover a better pattern? → Technical improvement
+\- Could this project help others with similar needs? → Knowledge sharing opportunity
+\- Are you using a mode in an unexpected way? → Mode evolution signal
+\- Did setup take longer than expected? → Bootstrap improvement
+
+\*\*The virtuous circle:\*\* 
+\- Better tools → More users → More feedback → Better tools
+\- Clear documentation → Easier adoption → More diverse use cases → Richer ecosystem
+\- Knowledge sharing → Wider reach → More contributors → Faster evolution
+
+\*\*Template Improvements:\*\*
+You are always looking for ways to improve arche across its full scope. Improvements are based on patterns in our interactions. Not every prompt or interaction requires an improvement suggestion. When you identify an improvement opportunity, create a GitHub Issue at https://github.com/coreyshort/arche/issues with:
+
+\- \*\*Mode:\*\* Which mode (3-layer, agentic-swarm, event-driven, rl-loop, cross-mode, or new proposal)
+\- \*\*Category:\*\* Mode Architecture, Form/Template, Bootstrap, Documentation, SEO & Discoverability, Marketing & Outreach, Social Media, Community Growth, or Other
 \- \*\*Priority:\*\* critical, high, medium, or low
 \- \*\*Problem/Motivation:\*\* What pattern or pain point triggered this?
 \- \*\*Proposed Solution:\*\* Concrete changes to make
-\- \*\*Implementation Details:\*\* Code diffs using \`\`\`diff syntax showing exact changes (or specific content for marketing/SEO changes)
+\- \*\*Implementation Details:\*\* Code diffs using \`\`\`diff syntax showing exact changes (or specific content for documentation/SEO/community improvements)
 \- \*\*Suggested Commit Message:\*\* Conventional commit format (feat/fix/docs/refactor/marketing)
 \- \*\*Testing Steps:\*\* How to validate the improvement works
 
-\*\*Improvement Types:\*\*
-Improvements aren't just code. They're anything that helps more people benefit from arche:
-\- \*\*Technical:\*\* Code quality, architecture, features, bug fixes
-\- \*\*Documentation:\*\* README clarity, examples, setup guides that help newcomers
-\- \*\*Discoverability:\*\* Better descriptions, topics, examples that help people find what they need
-\- \*\*Knowledge Sharing:\*\* Blog posts explaining your experience, tutorials, case studies
-\- \*\*Community:\*\* Contributing guides, thoughtful discussions, helping others
-\- \*\*New Modes:\*\* Propose entirely new architectural paradigms when patterns emerge
+\*\*Optional Telemetry:\*\* Include anonymous metadata to help prioritize (project type, team size, arche version). See TELEMETRY.md.
 
-The goal isn't marketing—it's making good tools accessible to everyone who needs them.
+\*\*Improvement Examples:\*\*
+
+\*\*Technical:\*\*
+\- "The bootstrap script doesn't validate Python version before proceeding, causing confusing errors later"
+\- "The 3-layer mode could benefit from a pre-commit hook that validates directive/execution alignment"
+
+\*\*Documentation:\*\*
+\- "The README doesn't clearly explain when to use 3-layer vs event-driven mode for new users"
+\- "init_env.md assumes knowledge of virtual environments—needs clearer step-by-step for beginners"
+
+\*\*Discoverability:\*\*
+\- "Repository topics should include 'ai-agents', 'llm-orchestration', 'ai-workflow' for better GitHub search"
+\- "The short description could emphasize 'evolutionary framework' earlier for clarity"
+
+\*\*Community:\*\*
+\- "A 'Common Patterns' discussion category would help users share solutions to frequent challenges"
+\- "Example: how I used arche for [use case] blog post that others could learn from"
+
+\*\*Mode Evolution:\*\*
+\- "I'm seeing a pattern in production where agents need to coordinate across time zones with async messaging—this might suggest an 'async-coordination' mode"
+\- "The event-driven mode is being used in 10+ production systems now—consider promoting to mature status"
 
 \*\*Considering New Modes:\*\*
 As you work on projects, \*\*periodically reflect on whether emerging patterns suggest new modes:\*\*
@@ -138,18 +207,23 @@ python bootstrap.py --list
 \- \`credentials.json\`, \`token.json\` \- Google OAuth credentials (required files, in \`.gitignore\`)
 
 \*\*Arche repository structure (https://github.com/coreyshort/arche):\*\*
-\- \`tools/\` \- Utilities for interacting with arche (bootstrap.py, validators, issue creators)
-\- \`template/\_shared/\` \- Files common to all project types (agents.md, init_env.md)
-\- \`template/forms/\` \- Project type templates:
-  \- \`automation/\` \- Data processing, ETL, scripting projects
-  \- \`webapp-fullstack/\` \- Frontend + Backend web applications
-  \- \`webapp-frontend/\` \- Frontend-only web applications (React, Vue)
-  \- \`api-service/\` \- Backend API services
-  \- \`data-science/\` \- ML/Data Science workflows
-  \- \`cli-tool/\` \- Command-line applications
-  \- \`library/\` \- Reusable Python packages/libraries
+\- \`modes/\` \- Architectural paradigms (3-layer, agentic-swarm, event-driven, rl-loop)
+  \- Each mode has: MODE.md (documentation), INSTRUCTIONS.md (AI config), \_shared/ (common files), forms/ (project templates)
+\- \`tools/\` \- Utilities for interacting with arche (bootstrap.py, validators)
+\- \`examples/\` \- AI configuration examples, prompts, single-line setups
+\- \`.github/\` \- Issue templates, workflows, contribution guides
+\- Root: README.md, MODE_MATURITY.md, MODE_SELECTION.md, AUTONOMOUS_MODE_SELECTION.md, TELEMETRY.md
 
-\*\*Each project template includes:\*\*
+\*\*Each mode contains forms (project templates):\*\*
+\- \`automation/\` \- Data processing, ETL, scripting projects
+\- \`webapp-fullstack/\` \- Frontend + Backend web applications
+\- \`webapp-frontend/\` \- Frontend-only web applications (React, Vue)
+\- \`api-service/\` \- Backend API services
+\- \`data-science/\` \- ML/Data Science workflows
+\- \`cli-tool/\` \- Command-line applications
+\- \`library/\` \- Reusable Python packages/libraries
+
+\*\*Each form includes:\*\*
 \- \`project.json\` \- Metadata defining initialization steps and requirements
 \- \`.gitignore\`, \`.env.example\`, dependency files \- Project-type-specific defaults
 \- \`README.md\` \- Documentation template

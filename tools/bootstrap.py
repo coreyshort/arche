@@ -432,6 +432,12 @@ Repository: {REPO_URL}
         action="store_true",
         help="List available modes and exit"
     )
+    parser.add_argument(
+        "--no-telemetry",
+        action="store_true",
+        help="Disable anonymous telemetry (default: enabled)"
+    )
+    
     
     parser.add_argument(
         "--list-forms",
@@ -463,12 +469,15 @@ Repository: {REPO_URL}
     if args.list_forms:
         print(f"Available forms in '{args.list_forms}' mode from {REPO_URL}:\n")
         forms = list_available_forms(args.list_forms, args.branch)
-        if forms:
-            for form in forms:
-                config = fetch_project_json(args.list_forms, form, args.branch)
-                desc = config.get("description", "") if config else ""
-                print(f"  • {form}")
-                if desc:
+    enable_telemetry = not args.no_telemetry
+    
+    success = initialize_project(
+        args.mode,
+        args.form,
+        args.target,
+        args.name,
+        args.branch,
+        enable_telemetrydesc:
                     print(f"    {desc}")
         else:
             print(f"No forms found for mode '{args.list_forms}' or unable to connect to GitHub")
