@@ -1,0 +1,10 @@
+{
+  "telemetry_enabled": true,
+  "mode": null,
+  "form": null,
+  "project_type": null,
+  "team_size": null,
+  "created_at": null,
+  "arche_version": null,
+  "notes": "This file is never committed. It helps the arche community understand usage patterns. To disable: set telemetry_enabled to false or delete this file. See TELEMETRY.md"
+}

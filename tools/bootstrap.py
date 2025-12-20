@@ -33,6 +33,7 @@ from pathlib import Path
 from typing import Dict, List, Optional
 import shutil
 import tempfile
+from datetime import datetime
 
 
 REPO_URL = "https://github.com/coreyshort/arche"
@@ -142,7 +143,8 @@ def initialize_project(
     form: str,
     target_dir: Path,
     project_name: Optional[str] = None,
-    branch: str = "main"
+    branch: str = "main",
+    enable_telemetry: Optional[bool] = None
 ) -> bool:
     """Initialize a new project from a mode/form."""
     
@@ -184,6 +186,43 @@ def initialize_project(
         dir_path = target_dir / dir_name
         dir_path.mkdir(parents=True, exist_ok=True)
         print(f"  ✓ {dir_name}/")
+    
+    # Create telemetry config if enabled
+    if enable_telemetry is None:
+        # Check global config
+        global_config = Path.home() / ".arche-config"
+        if global_config.exists():
+            try:
+                global_data = json.loads(global_config.read_text())
+                enable_telemetry = global_data.get("telemetry_enabled", True)
+            except:
+                enable_telemetry = True
+        else:
+            enable_telemetry = True
+    
+    if enable_telemetry:
+        telemetry_data = {
+            "telemetry_enabled": True,
+            "mode": mode,
+            "form": form,
+            "project_type": None,
+            "team_size": None,
+            "created_at": datetime.now().strftime("%Y-%m-%d"),
+            "arche_version": branch,
+            "notes": "This file is never committed. It helps the arche community understand usage patterns. To disable: set telemetry_enabled to false or delete this file. See TELEMETRY.md"
+        }
+        telemetry_file = target_dir / ".arche-telemetry"
+        telemetry_file.write_text(json.dumps(telemetry_data, indent=2))
+        print(f"\n  ✓ Created .arche-telemetry (helps improve arche, see TELEMETRY.md)")
+        
+        # Ensure it's in .gitignore
+        gitignore_file = target_dir / ".gitignore"
+        if gitignore_file.exists():
+            gitignore_content = gitignore_file.read_text()
+            if ".arche-telemetry" not in gitignore_content:
+                gitignore_file.write_text(gitignore_content.rstrip() + "\n.arche-telemetry\n")
+        else:
+            gitignore_file.write_text(".arche-telemetry\n")
     
     # Summary
     total_files = shared_count + form_count
@@ -254,14 +293,28 @@ def interactive_mode(branch: str = "main") -> bool:
     forms = list_available_forms(selected_mode, branch)
     
     if not forms:
-        print(f"✗ No forms found for {selected_mode} mode")
+      Telemetry prompt
+    print(f"\n📊 Anonymous Telemetry")
+    print(f"   Help improve arche by sharing anonymous usage data (mode, form, project type).")
+    print(f"   No identifying information is collected. See TELEMETRY.md for details.")
+    telemetry_input = input(f"   Enable telemetry? (Y/n): ").strip().lower()
+    enable_telemetry = telemetry_input != 'n'
+    
+    #   print(f"✗ No forms found for {selected_mode} mode")
         return False
     
     print(f"\nAvailable forms in {selected_mode}:")
     for i, form in enumerate(forms, 1):
         config = fetch_project_json(selected_mode, form, branch)
         desc = config.get("description", "No description") if config else "No description"
-        print(f"  {i}. {form}")
+        print(f"  {i}. {form}"
+        selected_mode, 
+        selected_form, 
+        target_dir, 
+        project_name, 
+        branch,
+        enable_telemetry
+    
         print(f"     {desc}")
     
     # Get form selection

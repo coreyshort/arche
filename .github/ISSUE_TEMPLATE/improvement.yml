@@ -167,3 +167,54 @@ body:
         ```
         ImportError: No module named 'pandas'
         ```
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        
+        ## Optional: Anonymous Telemetry
+        
+        The following fields help us understand arche usage patterns to prioritize improvements and track mode maturity. **All fields are optional** and contain no identifying information.
+        
+        See [TELEMETRY.md](https://github.com/coreyshort/arche/blob/main/TELEMETRY.md) for details.
+
+  - type: dropdown
+    id: project_type
+    attributes:
+      label: Project Type (Optional)
+      description: What kind of project are you building?
+      options:
+        - "Internal tool / automation"
+        - "SaaS / commercial product"
+        - "Open source project"
+        - "Research / academic"
+        - "Personal / learning"
+        - "Enterprise application"
+        - "Other"
+        - "Prefer not to say"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: team_size
+    attributes:
+      label: Team Size (Optional)
+      description: How many people work on this project?
+      options:
+        - "Solo (1)"
+        - "Small (2-3)"
+        - "Medium (4-10)"
+        - "Large (10+)"
+        - "Prefer not to say"
+    validations:
+      required: false
+
+  - type: input
+    id: arche_version
+    attributes:
+      label: Arche Version (Optional)
+      description: If known, which version of arche are you using?
+      placeholder: "1.0.0 or commit hash"
+    validations:
+      required: false

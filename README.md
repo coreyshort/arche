@@ -188,6 +188,8 @@ Include:
 - Proposed solution with implementation details
 - Testing approach
 
+**Optional:** Include anonymous telemetry (project type, team size) to help prioritize improvements. See [TELEMETRY.md](TELEMETRY.md).
+
 ### Proposing New Modes
 
 See an emerging paradigm not captured by existing modes? Propose it:
@@ -198,6 +200,21 @@ See an emerging paradigm not captured by existing modes? Propose it:
 4. Propose initial structure and principles
 
 **New modes must emerge from real-world production use**, not theoretical possibilities. They require demonstrated patterns that work reliably.
+
+---
+
+## Telemetry & Privacy
+
+Arche collects **optional, anonymous usage data** to guide mode maturity and prioritize improvements:
+- Mode and form selection (e.g., "3-layer/automation")
+- Optional project type (internal tool, SaaS, research, etc.)
+- Optional team size category
+
+**What's NOT collected:** Project names, code, company names, or any identifying information.
+
+**Opt-out:** Use `--no-telemetry` flag, delete `.arche-telemetry`, or set `~/.arche-config` with `{"telemetry_enabled": false}`.
+
+**Full details:** [TELEMETRY.md](TELEMETRY.md)
 
 ---
 
