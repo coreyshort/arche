@@ -79,6 +79,16 @@ Follow the 3-layer mode: https://raw.githubusercontent.com/coreyshort/arche/main
 
 **Model-agnostic:** Works with Claude, ChatGPT, Copilot, Gemini, and any future AI.
 
+**Let AI select mode autonomously:**
+
+AI agents can analyze your project and select the appropriate mode without human intervention:
+```
+Initialize an arche project for: [describe your project]
+Use the autonomous mode selection algorithm to choose the best mode.
+```
+
+The AI will analyze requirements, score modes, and bootstrap with the optimal choice. See [AUTONOMOUS_MODE_SELECTION.md](AUTONOMOUS_MODE_SELECTION.md).
+
 **Full project setup (5 minutes):**
 
 ```bash

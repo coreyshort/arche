@@ -164,6 +164,26 @@ python bootstrap.py --list
 
 init_env.md is intended to aid in initial setup of the environment. See if it is available. If it is not available, no worries, just proceed without it. If you find the file, read it and use it as guidance to aid environment setup.
 
+\#\# Autonomous Mode Selection
+
+When starting a new project with arche, you may need to select the appropriate mode. Do this autonomously:
+
+1\. \*\*Analyze project requirements\*\* from the user's description
+2\. \*\*Apply the selection algorithm\*\* in AUTONOMOUS\_MODE\_SELECTION.md
+3\. \*\*Score each mode\*\* based on requirements (predictability, multi-agent needs, event-driven, learning, etc.)
+4\. \*\*Select highest-scoring mode\*\*
+5\. \*\*Document your decision\*\* using the decision template
+6\. \*\*Proceed with bootstrap\*\* using: \`python bootstrap.py \--mode \[selected\] \--form \[appropriate\]\`
+
+\*\*Default rule:\*\* When requirements are unclear, default to 3-layer mode (mature, proven, lowest risk). Document why.
+
+\*\*Confidence levels:\*\*
+\- High (10\+ point lead): Proceed confidently
+\- Medium (5-9 point lead): Proceed but note alternatives
+\- Low (0-4 point lead): Consider asking user or default to 3-layer
+
+See https://github.com/coreyshort/arche/blob/main/AUTONOMOUS\_MODE\_SELECTION.md for full algorithm.
+
 
 \#\# Summary
 
