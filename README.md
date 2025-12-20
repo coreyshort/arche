@@ -4,6 +4,10 @@
 
 In philosophy, the archē is not a thing but a generative source: the set of assumptions, structures, and forces that make creation possible. Arche exists in that same spirit. It is not an agent, but the framework from which agents emerge—defining how intent becomes action, how reasoning is shaped, and how systems learn to build themselves. When an agent says "Arche built this," it reflects a lineage: a common origin of patterns, constraints, and principles that guide autonomous work without prescribing its outcomes.
 
+Forms
+
+In Aristotelian philosophy, a form is the organizing principle that makes a thing what it is—distinct from its material, yet inseparable from its realization. A form defines structure, purpose, and potential without prescribing a single instantiation. In Arche, Forms serve the same role. They describe the canonical shapes of projects and agents: enduring patterns of intent, structure, and behavior from which concrete systems can be brought into being. A form is not a template to be copied, but a conceptual lineage to be expressed. When an agent or project is created, it does not merely follow a pattern—it instantiates a form, carrying forward the principles that define how it should reason, act, and evolve.
+
 ---
 
 ## The 3-Layer Architecture
