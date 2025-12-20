@@ -1,0 +1,10 @@
+{
+  "type": "automation",
+  "name": "Automation/Scripting Project",
+  "description": "ETL pipelines, data processing, web scraping, report generation, and task automation",
+  "languages": ["python"],
+  "required_tools": ["python3", "pip", "git"],
+  "optional_tools": ["postgresql", "arangodb"],
+  "python_version": "3.10+",
+  "directories": ["directives", "execution", ".tmp", "improvements"]
+}
