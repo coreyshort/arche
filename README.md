@@ -174,7 +174,7 @@ The AI will:
 
 ### Option 5: Full Manual Setup (5 minutes)
 
-**For new projects using the bootstrap tool:**
+**For new projects using the bootstrap script:**
 
 ```bash
 # Download bootstrap script
