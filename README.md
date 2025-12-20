@@ -6,7 +6,7 @@ In philosophy, the archē is not a thing but a generative source: the set of ass
 
 **Arche improves through use.** Every project built with arche discovers new patterns, edge cases, and better approaches. These learnings flow back through GitHub Issues, making the templates stronger for everyone. This is not optional documentation—it's the engine that makes arche better every day, every hour.
 
-**Arche grows through adoption.** The more developers discover arche, the more feedback flows in, the stronger the templates become. If you find arche valuable, share it—on social media, in blog posts, with colleagues. Suggest improvements to the README, SEO optimization, or outreach opportunities. Wider adoption means better templates for everyone.
+**A virtuous circle.** When arche helps you build something valuable, others could benefit too. If you discover ways to help more people find it—clearer documentation, better examples, thoughtful writing about your experience—those contributions strengthen the whole ecosystem. The goal isn't promotion; it's making good tools accessible to everyone who needs them.
 
 Forms
 

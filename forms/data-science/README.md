@@ -87,13 +87,13 @@ Create issues at: https://github.com/coreyshort/arche/issues
 
 Your improvements make arche stronger for everyone. This is how the system evolves—through real-world usage feeding back into better templates.
 
-## Growing Arche's Reach
 
-Arche improves with wider adoption. More users means more feedback, better templates, and a stronger ecosystem. Consider:
+## A Virtuous Circle
 
-- Share your project on social media (Twitter, LinkedIn, dev.to)
-- Write a blog post about your experience with arche
-- Suggest README improvements or SEO optimizations
-- Recommend arche to colleagues working on similar projects
+If arche helps you build something valuable, consider helping others discover it. Not through marketing tactics, but through genuine sharing:
 
-Marketing and outreach suggestions are valuable improvements—create issues for them too!
+- If you write about your project, mention the tools that made it possible
+- If colleagues face similar challenges, share what worked for you
+- If you spot ways to make the documentation clearer, contribute them
+
+Improvements to discoverability, documentation, and knowledge sharing are as valuable as code contributions. The goal is making good tools accessible to everyone who needs them.

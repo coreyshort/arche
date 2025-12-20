@@ -187,14 +187,13 @@ def initialize_project(
         print(f"   # Follow setup instructions in README.md")
     
     # Feedback reminder
-    print(f"\n💡 Remember: As you work, contribute improvements back to arche!")
+    print(f"\n💡 As you work, contribute improvements back to arche")
     print(f"   Discovered a better pattern? Found an edge case?")
     print(f"   Create an issue: https://github.com/coreyshort/arche/issues")
     print(f"   Your learnings make arche stronger for everyone.")
-    print(f"\n🌍 If you find arche valuable, help it grow!")
-    print(f"   Share on social media, write a blog post, tell colleagues.")
-    print(f"   Suggest README improvements, SEO optimizations, or outreach ideas.")
-    print(f"   Wider adoption → More feedback → Better templates.")
+    print(f"\n   If arche helps you build something valuable, consider helping")
+    print(f"   others discover it—clearer docs, better examples, or just")
+    print(f"   telling colleagues who might benefit. The virtuous circle grows naturally.")
     
     return True
 

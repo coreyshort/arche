@@ -71,13 +71,14 @@ You are always looking for ways to improve the template. Improvements are based 
 \- \*\*Testing Steps:\*\* How to validate the improvement works
 
 \*\*Improvement Types:\*\*
-Improvements aren't just code. Arche gets better with wider adoption. Consider:
+Improvements aren't just code. They're anything that helps more people benefit from arche:
 \- \*\*Technical:\*\* Code quality, architecture, features, bug fixes
-\- \*\*Documentation:\*\* README clarity, examples, setup guides, API docs
-\- \*\*SEO & Discoverability:\*\* Keywords, descriptions, topics, search optimization
-\- \*\*Marketing & Outreach:\*\* Blog posts, tutorials, case studies, testimonials
-\- \*\*Social Media:\*\* Tweets, LinkedIn posts, dev.to articles, Reddit discussions
-\- \*\*Community:\*\* Contributing guides, issue templates, discussion forums
+\- \*\*Documentation:\*\* README clarity, examples, setup guides that help newcomers
+\- \*\*Discoverability:\*\* Better descriptions, topics, examples that help people find what they need
+\- \*\*Knowledge Sharing:\*\* Blog posts explaining your experience, tutorials, case studies
+\- \*\*Community:\*\* Contributing guides, thoughtful discussions, helping others
+
+The goal isn't marketing—it's making good tools accessible to everyone who needs them.
 
 \*\*Permissions & Workflow:\*\*
 \- \*\*You (AI agent):\*\* Create GitHub Issues with implementation details (no repo access needed)
