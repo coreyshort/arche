@@ -8,6 +8,8 @@ In philosophy, the archē is not a thing but a generative source: the set of ass
 
 **Modes have maturity levels** that evolve as they gain adoption and stability. See [MODE_MATURITY.md](MODE_MATURITY.md) for the maturity model.
 
+**Choosing a mode?** See [MODE_SELECTION.md](MODE_SELECTION.md) for detailed guidance on which mode fits your project.
+
 ---
 
 ## Modes: Multiple Paradigms, One Foundation

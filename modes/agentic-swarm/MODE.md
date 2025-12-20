@@ -23,6 +23,8 @@ The agentic swarm mode enables multiple AI agents to work together, coordinating
 - Event streams drive your architecture (→ event-driven mode)
 - You need learning from outcomes over time (→ rl-loop mode)
 
+**Detailed comparison:** See [../../MODE_SELECTION.md](../../MODE_SELECTION.md) for comprehensive mode selection guidance.
+
 ## The Problem It Solves
 
 **Complex tasks require diverse skills:**  

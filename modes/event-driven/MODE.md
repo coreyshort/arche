@@ -23,6 +23,8 @@ The event-driven mode structures agent systems around event streams, enabling re
 - Multiple agents need to coordinate (→ agentic-swarm mode)
 - Agents learn from historical outcomes (→ rl-loop mode)
 
+**Detailed comparison:** See [../../MODE_SELECTION.md](../../MODE_SELECTION.md) for comprehensive mode selection guidance.
+
 ## The Problem It Solves
 
 **Linear workflows don't fit reactive systems:**  
