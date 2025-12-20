@@ -1,6 +1,6 @@
 Follow the arche framework for reliable AI-assisted development.
 
-Read these instructions: https://raw.githubusercontent.com/coreyshort/arche/main/ARCHE_INSTRUCTIONS.md
+For 3-layer mode projects, read: https://raw.githubusercontent.com/coreyshort/arche/main/modes/3-layer/INSTRUCTIONS.md
 
 Quick principles:
 - Read directives/*.md to understand what to do

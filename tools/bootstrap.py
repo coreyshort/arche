@@ -3,20 +3,20 @@
 Bootstrap a new project from the Arche template repository.
 
 This script fetches template files from https://github.com/coreyshort/arche
-and initializes a new project with the selected template type.
+and initializes a new project with the selected mode and form.
 
 Usage:
     # Interactive mode (recommended)
     python bootstrap.py --interactive
     
     # Direct initialization
-    python bootstrap.py --type automation --name "My Project"
+    python bootstrap.py --mode 3-layer --form automation --name "My Project"
     
     # Specify target directory
-    python bootstrap.py --type automation --target /path/to/project
+    python bootstrap.py --mode 3-layer --form automation --target /path/to/project
     
     # Use specific version/branch
-    python bootstrap.py --type automation --branch v1.0.0
+    python bootstrap.py --mode 3-layer --form automation --branch v1.0.0
 
 Requirements:
     - Python 3.10+
@@ -101,22 +101,35 @@ def fetch_template_recursive(
     return files_copied
 
 
-def list_available_templates(branch: str = "main") -> List[str]:
-    """List available template types from GitHub."""
-    contents = fetch_directory_tree("forms", branch)
+def list_available_modes(branch: str = "main") -> List[str]:
+    """List available modes from GitHub."""
+    contents = fetch_directory_tree("modes", branch)
     if not contents:
         return []
     
-    templates = [
+    modes = [
         item["name"] for item in contents
         if item["type"] == "dir" and not item["name"].startswith((".", "_"))
     ]
-    return templates
+    return modes
 
 
-def fetch_project_json(template_type: str, branch: str = "main") -> Optional[Dict]:
-    """Fetch project.json metadata for a template."""
-    url = f"{RAW_URL}/{branch}/forms/{template_type}/project.json"
+def list_available_forms(mode: str, branch: str = "main") -> List[str]:
+    """List available forms for a specific mode."""
+    contents = fetch_directory_tree(f"modes/{mode}/forms", branch)
+    if not contents:
+        return []
+    
+    forms = [
+        item["name"] for item in contents
+        if item["type"] == "dir" and not item["name"].startswith((".", "_"))
+    ]
+    return forms
+
+
+def fetch_project_json(mode: str, form: str, branch: str = "main") -> Optional[Dict]:
+    """Fetch project.json metadata for a form within a mode."""
+    url = f"{RAW_URL}/{branch}/modes/{mode}/forms/{form}/project.json"
     try:
         with urllib.request.urlopen(url) as response:
             return json.loads(response.read())
@@ -125,38 +138,41 @@ def fetch_project_json(template_type: str, branch: str = "main") -> Optional[Dic
 
 
 def initialize_project(
-    template_type: str,
+    mode: str,
+    form: str,
     target_dir: Path,
     project_name: Optional[str] = None,
     branch: str = "main"
 ) -> bool:
-    """Initialize a new project from a template."""
+    """Initialize a new project from a mode/form."""
     
-    print(f"\n🚀 Initializing project from Arche template: {template_type}")
+    print(f"\n🚀 Initializing project from Arche")
+    print(f"   Mode: {mode}")
+    print(f"   Form: {form}")
     print(f"   Source: {REPO_URL}")
     print(f"   Branch: {branch}")
     print(f"   Target: {target_dir}\n")
     
-    # Fetch project.json to get template metadata
-    config = fetch_project_json(template_type, branch)
+    # Fetch project.json to get metadata
+    config = fetch_project_json(mode, form, branch)
     if not config:
-        print(f"✗ Template '{template_type}' not found or invalid")
+        print(f"✗ Form '{form}' in mode '{mode}' not found or invalid")
         return False
     
-    print(f"Template: {config.get('name', template_type)}")
+    print(f"Template: {config.get('name', form)}")
     print(f"Description: {config.get('description', 'No description')}\n")
     
     # Create target directory
     target_dir.mkdir(parents=True, exist_ok=True)
     
-    # Fetch shared files
-    print("Fetching shared files from _shared/...")
-    shared_count = fetch_template_recursive("_shared", target_dir, branch)
+    # Fetch shared files for this mode
+    print(f"Fetching shared files from modes/{mode}/_shared/...")
+    shared_count = fetch_template_recursive(f"modes/{mode}/_shared", target_dir, branch)
     
-    # Fetch template-specific files
-    print(f"\nFetching {template_type} template files...")
-    template_count = fetch_template_recursive(
-        f"forms/{template_type}", 
+    # Fetch form-specific files
+    print(f"\nFetching {form} form files...")
+    form_count = fetch_template_recursive(
+        f"modes/{mode}/forms/{form}", 
         target_dir, 
         branch,
         exclude=["project.json"]  # Don't copy project.json to target
@@ -170,10 +186,11 @@ def initialize_project(
         print(f"  ✓ {dir_name}/")
     
     # Summary
-    total_files = shared_count + template_count
+    total_files = shared_count + form_count
     print(f"\n✅ Successfully initialized project!")
     print(f"   Files copied: {total_files}")
-    print(f"   Template type: {template_type}")
+    print(f"   Mode: {mode}")
+    print(f"   Form: {form}")
     
     # Next steps
     print(f"\n📋 Next steps:")
@@ -199,38 +216,67 @@ def initialize_project(
 
 
 def interactive_mode(branch: str = "main") -> bool:
-    """Interactive template selection and initialization."""
-    print("\n🎯 Arche Template Bootstrap - Interactive Mode")
+    """Interactive mode and form selection and initialization."""
+    print("\n🎯 Arche Bootstrap - Interactive Mode")
     print(f"   Repository: {REPO_URL}\n")
     
-    # List available templates
-    print("Fetching available templates...")
-    templates = list_available_templates(branch)
+    # List available modes
+    print("Fetching available modes...")
+    modes = list_available_modes(branch)
     
-    if not templates:
-        print("✗ No templates found or unable to connect to GitHub")
+    if not modes:
+        print("✗ No modes found or unable to connect to GitHub")
         return False
     
-    print("\nAvailable templates:")
-    for i, template in enumerate(templates, 1):
-        config = fetch_project_json(template, branch)
-        desc = config.get("description", "No description") if config else "No description"
-        print(f"  {i}. {template}")
-        print(f"     {desc}")
+    print("\nAvailable modes:")
+    for i, mode in enumerate(modes, 1):
+        print(f"  {i}. {mode}")
     
-    # Get user selection
+    # Get mode selection
     while True:
         try:
-            choice = input(f"\nSelect template (1-{len(templates)}) or 'q' to quit: ").strip()
+            choice = input(f"\nSelect mode (1-{len(modes)}) or 'q' to quit: ").strip()
             if choice.lower() == 'q':
                 return False
             
             idx = int(choice) - 1
-            if 0 <= idx < len(templates):
-                template_type = templates[idx]
+            if 0 <= idx < len(modes):
+                selected_mode = modes[idx]
                 break
             else:
-                print(f"Please enter a number between 1 and {len(templates)}")
+                print(f"Please enter a number between 1 and {len(modes)}")
+        except (ValueError, KeyboardInterrupt):
+            print("\nCancelled.")
+            return False
+    
+    # List available forms for selected mode
+    print(f"\nFetching forms for {selected_mode} mode...")
+    forms = list_available_forms(selected_mode, branch)
+    
+    if not forms:
+        print(f"✗ No forms found for {selected_mode} mode")
+        return False
+    
+    print(f"\nAvailable forms in {selected_mode}:")
+    for i, form in enumerate(forms, 1):
+        config = fetch_project_json(selected_mode, form, branch)
+        desc = config.get("description", "No description") if config else "No description"
+        print(f"  {i}. {form}")
+        print(f"     {desc}")
+    
+    # Get form selection
+    while True:
+        try:
+            choice = input(f"\nSelect form (1-{len(forms)}) or 'q' to quit: ").strip()
+            if choice.lower() == 'q':
+                return False
+            
+            idx = int(choice) - 1
+            if 0 <= idx < len(forms):
+                selected_form = forms[idx]
+                break
+            else:
+                print(f"Please enter a number between 1 and {len(forms)}")
         except (ValueError, KeyboardInterrupt):
             print("\nCancelled.")
             return False
@@ -247,7 +293,8 @@ def interactive_mode(branch: str = "main") -> bool:
     
     # Confirm
     print(f"\n📝 Summary:")
-    print(f"   Template: {template_type}")
+    print(f"   Mode: {selected_mode}")
+    print(f"   Form: {selected_form}")
     if project_name:
         print(f"   Name: {project_name}")
     print(f"   Target: {target_dir}")
@@ -258,12 +305,12 @@ def interactive_mode(branch: str = "main") -> bool:
         return False
     
     # Initialize
-    return initialize_project(template_type, target_dir, project_name, branch)
+    return initialize_project(selected_mode, selected_form, target_dir, project_name, branch)
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Bootstrap a new project from Arche templates",
+        description="Bootstrap a new project from Arche modes and forms",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=f"""
 Examples:
@@ -271,15 +318,21 @@ Examples:
   python bootstrap.py --interactive
   
   # Direct initialization
-  python bootstrap.py --type automation
+  python bootstrap.py --mode 3-layer --form automation
   
   # Specify project name and target
-  python bootstrap.py --type automation --name "My ETL Project" --target ~/projects/my-etl
+  python bootstrap.py --mode 3-layer --form automation --name "My ETL Project" --target ~/projects/my-etl
   
   # Use specific version
-  python bootstrap.py --type automation --branch v1.0.0
+  python bootstrap.py --mode 3-layer --form automation --branch v1.0.0
+  
+  # List available modes
+  python bootstrap.py --list-modes
+  
+  # List forms in a specific mode
+  python bootstrap.py --list-forms 3-layer
 
-Template Repository: {REPO_URL}
+Repository: {REPO_URL}
         """
     )
     
@@ -290,9 +343,15 @@ Template Repository: {REPO_URL}
     )
     
     parser.add_argument(
-        "-t", "--type",
+        "-m", "--mode",
         type=str,
-        help="Template type (automation, webapp-fullstack, api-service, etc.)"
+        help="Mode (3-layer, agentic-swarm, event-driven, rl-loop, etc.)"
+    )
+    
+    parser.add_argument(
+        "-f", "--form",
+        type=str,
+        help="Form within the mode (automation, webapp-fullstack, api-service, etc.)"
     )
     
     parser.add_argument(
@@ -316,6 +375,19 @@ Template Repository: {REPO_URL}
     )
     
     parser.add_argument(
+        "--list-modes",
+        action="store_true",
+        help="List available modes and exit"
+    )
+    
+    parser.add_argument(
+        "--list-forms",
+        type=str,
+        metavar="MODE",
+        help="List available forms for a specific mode and exit"
+    )
+    
+    parser.add_argument(
         "-l", "--list",
         action="store_true",
         help="List available templates and exit"
@@ -323,19 +395,30 @@ Template Repository: {REPO_URL}
     
     args = parser.parse_args()
     
-    # List templates mode
-    if args.list:
-        print(f"Available templates from {REPO_URL}:\n")
-        templates = list_available_templates(args.branch)
-        if templates:
-            for template in templates:
-                config = fetch_project_json(template, args.branch)
+    # List modes
+    if args.list_modes:
+        print(f"Available modes from {REPO_URL}:\n")
+        modes = list_available_modes(args.branch)
+        if modes:
+            for mode in modes:
+                print(f"  • {mode}")
+        else:
+            print("No modes found or unable to connect to GitHub")
+        return 0
+    
+    # List forms for a specific mode
+    if args.list_forms:
+        print(f"Available forms in '{args.list_forms}' mode from {REPO_URL}:\n")
+        forms = list_available_forms(args.list_forms, args.branch)
+        if forms:
+            for form in forms:
+                config = fetch_project_json(args.list_forms, form, args.branch)
                 desc = config.get("description", "") if config else ""
-                print(f"  • {template}")
+                print(f"  • {form}")
                 if desc:
                     print(f"    {desc}")
         else:
-            print("No templates found or unable to connect to GitHub")
+            print(f"No forms found for mode '{args.list_forms}' or unable to connect to GitHub")
         return 0
     
     # Interactive mode
@@ -343,12 +426,13 @@ Template Repository: {REPO_URL}
         success = interactive_mode(args.branch)
         return 0 if success else 1
     
-    # Direct mode - require template type
-    if not args.type:
-        parser.error("--type is required unless using --interactive or --list")
+    # Direct mode - require mode and form
+    if not args.mode or not args.form:
+        parser.error("--mode and --form are required unless using --interactive, --list-modes, or --list-forms")
     
     success = initialize_project(
-        args.type,
+        args.mode,
+        args.form,
         args.target,
         args.name,
         args.branch

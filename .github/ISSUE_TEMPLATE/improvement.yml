@@ -29,20 +29,28 @@ body:
       required: true
 
   - type: dropdown
+    id: mode
+    attributes:
+      label: Mode
+      description: Which mode does this improvement target?
+      options:
+        - "3-layer (deterministic execution)"
+        - "agentic-swarm (multi-agent coordination)"
+        - "event-driven (reactive agents)"
+        - "rl-loop (reinforcement learning)"
+        - "New mode proposal"
+        - "Cross-mode / Framework-wide"
+    validations:
+      required: true
+
+  - type: dropdown
     id: category
     attributes:
       label: Category
       description: Which part of the system does this improve?
       options:
-        - Core Architecture (agents.md)
-        - Environment Setup (init_env.md)
-        - Automation Template
-        - Webapp-Fullstack Template
-        - Webapp-Frontend Template
-        - API-Service Template
-        - Data-Science Template
-        - CLI-Tool Template
-        - Library Template
+        - Mode Architecture
+        - Form/Template within Mode
         - Bootstrap Script
         - Documentation Quality
         - SEO & Discoverability

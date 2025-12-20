@@ -1,7 +1,9 @@
 # GitHub Copilot Instructions for Arche Projects
 
-Follow the arche framework for reliable AI-assisted development:
-https://raw.githubusercontent.com/coreyshort/arche/main/ARCHE_INSTRUCTIONS.md
+Follow the arche framework for reliable AI-assisted development.
+
+For 3-layer mode projects:
+https://raw.githubusercontent.com/coreyshort/arche/main/modes/3-layer/INSTRUCTIONS.md
 
 ## Quick Reference
 
