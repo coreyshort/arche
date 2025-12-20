@@ -21,6 +21,12 @@ node_modules/
 .env.test.local
 .env.production.local
 
+# Arche framework files (managed by update tool)
+.arche-config
+.arche-telemetry
+.arche-backups/
+.arche-update.log
+
 # IDE
 .vscode/
 .idea/

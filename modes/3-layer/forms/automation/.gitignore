@@ -1,6 +1,9 @@
 # Temporary files (per AGENTS.md)
 .tmp/
 
+# Project improvements tracking
+improvements/
+
 # Python
 venv/
 .venv/
@@ -19,6 +22,12 @@ build/
 # Google OAuth credentials
 credentials.json
 token.json
+
+# Arche framework files (managed by update tool)
+.arche-config
+.arche-telemetry
+.arche-backups/
+.arche-update.log
 
 # IDE
 .vscode/

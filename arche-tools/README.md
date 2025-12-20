@@ -1,12 +1,12 @@
-# Arche Tools
+# Arche Management Tools
 
-This directory contains utilities for interacting with the Arche template system.
+Utilities for managing arche projects and framework updates.
 
 ## Available Tools
 
 ### bootstrap.py
 
-Initialize new projects from Arche templates.
+Initialize new projects from arche modes and forms.
 
 **Usage:**
 ```bash

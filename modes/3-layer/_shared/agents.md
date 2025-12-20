@@ -194,10 +194,11 @@ curl -O https://raw.githubusercontent.com/coreyshort/arche/main/arche-tools/boot
 python bootstrap.py --interactive
 
 \# Direct initialization
-python bootstrap.py --type automation --name "My Project"
+python bootstrap.py --mode 3-layer --form automation --name "My Project"
 
-\# List available templates
-python bootstrap.py --list
+# List available modes and forms
+python bootstrap.py --list-modes
+python bootstrap.py --list-forms 3-layer
 \`\`\`
 
 \#\# File Organization
