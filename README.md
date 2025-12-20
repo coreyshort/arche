@@ -23,11 +23,6 @@ In the beginning, there was arche — the first principle from which agency aris
 From this foundation emerge modes: the fundamental ways agency comes into being. A mode names how intent is formed, how reasoning unfolds, and how action becomes possible. It is not a framework imposed from above, but a manner of being — a way in which agency expresses itself when it acts.
 
 Within each mode, forms take shape as concrete realizations in code and behavior. Forms adapt a mode to particular problems, environments, or constraints, while remaining faithful to the underlying expression of agency.
-
-arche
-  └─ modes
-     └─ forms
-
 arche endures beneath all expression. Modes reveal how agency may be. Forms give that possibility shape.
 
 Arche supports different **modes**—fundamental architectural approaches for building agentic systems. Each mode addresses different problems and fits different use cases.
