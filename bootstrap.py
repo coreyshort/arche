@@ -166,7 +166,7 @@ def initialize_project(
     print("\nCreating project directories...")
     for dir_name in config.get("directories", []):
         dir_path = target_dir / dir_name
-        dir_path.mkdir(exist_ok=True)
+        dir_path.mkdir(parents=True, exist_ok=True)
         print(f"  ✓ {dir_name}/")
     
     # Summary
