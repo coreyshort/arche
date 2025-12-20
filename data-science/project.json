@@ -1,0 +1,35 @@
+{
+  "name": "data-science",
+  "description": "ML/Data Science workflow template",
+  "version": "1.0.0",
+  "category": "data-science",
+  "language": "python",
+  "framework": "jupyter",
+  "structure": {
+    "notebooks/": "Jupyter notebooks for exploration and experimentation",
+    "notebooks/exploration/": "Data exploration notebooks",
+    "notebooks/training/": "Model training notebooks",
+    "notebooks/evaluation/": "Model evaluation notebooks",
+    "execution/": "Production data pipeline scripts",
+    "directives/": "Workflow SOPs for data tasks",
+    "models/": "Trained model artifacts",
+    "data/": "Local data storage (gitignored)",
+    ".tmp/": "Temporary processing files"
+  },
+  "initialization": {
+    "steps": [
+      "python3 -m venv venv",
+      "source venv/bin/activate  # On Windows: venv\\Scripts\\activate",
+      "pip install -r requirements.txt",
+      "cp .env.example .env",
+      "jupyter notebook  # Or jupyter lab"
+    ],
+    "run_command": "jupyter notebook"
+  },
+  "dependencies": {
+    "core": ["numpy", "pandas", "scikit-learn", "matplotlib", "seaborn"],
+    "ml": ["tensorflow", "torch", "xgboost"],
+    "notebook": ["jupyter", "jupyterlab", "ipywidgets"],
+    "tracking": ["mlflow", "wandb"]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "library",
+  "description": "Reusable Python package/library template",
+  "version": "1.0.0",
+  "category": "library",
+  "language": "python",
+  "framework": "setuptools",
+  "structure": {
+    "src/package_name/": "Library source code",
+    "tests/": "Test suite with pytest",
+    "docs/": "Documentation",
+    "directives/": "Development workflow SOPs",
+    "examples/": "Usage examples"
+  },
+  "initialization": {
+    "steps": [
+      "python3 -m venv venv",
+      "source venv/bin/activate  # On Windows: venv\\Scripts\\activate",
+      "pip install -r requirements-dev.txt",
+      "pip install -e .  # Install in development mode",
+      "Replace 'package_name' throughout with your actual package name"
+    ],
+    "run_command": "pytest"
+  },
+  "dependencies": {
+    "testing": ["pytest", "pytest-cov", "tox"],
+    "docs": ["sphinx", "sphinx-rtd-theme"],
+    "quality": ["black", "flake8", "mypy", "isort"]
+  }
+}

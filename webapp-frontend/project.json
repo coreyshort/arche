@@ -1,0 +1,32 @@
+{
+  "name": "webapp-frontend",
+  "description": "Frontend-only web application template",
+  "version": "1.0.0",
+  "category": "web",
+  "language": "javascript",
+  "framework": "react",
+  "structure": {
+    "src/": "Application source code",
+    "src/components/": "React components",
+    "src/pages/": "Page-level components",
+    "src/hooks/": "Custom React hooks",
+    "src/utils/": "Utility functions",
+    "src/services/": "API service clients",
+    "directives/": "Development workflow SOPs",
+    "public/": "Static assets",
+    ".tmp/": "Temporary build files"
+  },
+  "initialization": {
+    "steps": [
+      "npm install",
+      "cp .env.example .env",
+      "Configure environment variables in .env",
+      "Review directives/ for workflow guidance"
+    ],
+    "run_command": "npm run dev"
+  },
+  "dependencies": {
+    "runtime": ["react", "react-dom", "react-router-dom", "axios"],
+    "dev": ["vite", "typescript", "@types/react", "eslint", "prettier"]
+  }
+}

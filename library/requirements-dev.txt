@@ -1,0 +1,17 @@
+# Core package dependencies (minimal)
+# Add your library's runtime dependencies here
+
+# Development dependencies
+pytest>=8.1.1
+pytest-cov>=4.1.0
+black>=24.3.0
+flake8>=7.0.0
+mypy>=1.9.0
+isort>=5.13.2
+
+# Documentation
+sphinx>=7.2.6
+sphinx-rtd-theme>=2.0.0
+
+# Testing across environments
+tox>=4.14.2

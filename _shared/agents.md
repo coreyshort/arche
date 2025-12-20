@@ -109,8 +109,11 @@ python bootstrap.py --list
 \- \`template/\_shared/\` \- Files common to all project types (agents.md, init_env.md)
 \- \`template/automation/\` \- Data processing, ETL, scripting projects
 \- \`template/webapp-fullstack/\` \- Frontend + Backend web applications
+\- \`template/webapp-frontend/\` \- Frontend-only web applications (React, Vue)
 \- \`template/api-service/\` \- Backend API services
-\- \`template/data-science/\` \- ML/Data Science workflows (planned)
+\- \`template/data-science/\` \- ML/Data Science workflows
+\- \`template/cli-tool/\` \- Command-line applications
+\- \`template/library/\` \- Reusable Python packages/libraries
 
 \*\*Each project template includes:\*\*
 \- \`project.json\` \- Metadata defining initialization steps and requirements

@@ -33,36 +33,81 @@ Arche provides battle-tested project templates implementing a 3-layer architectu
 
 ---
 
-### 🌐 Web App - Full Stack *(Coming Soon)*
-**Use for:** Frontend + Backend web applications
+### 🌐 Web App - Full Stack
+**Use for:** Complete web applications with frontend and backend
 
-**Will include:**
+**Includes:**
 - Next.js/React frontend structure
-- Node.js/Python backend API
+- Node.js/Express backend API
 - Shared types and utilities
 - Docker setup for services
 
+**[View Template →](webapp-fullstack/)**
+
 ---
 
-### 🔌 API Service *(Coming Soon)*
-**Use for:** Backend API services only
+### 🎨 Web App - Frontend Only
+**Use for:** Single-page applications, frontend-only projects
 
-**Will include:**
-- FastAPI/Express.js templates
-- Database migrations
+**Includes:**
+- React + TypeScript with Vite
+- Component development directives
+- API service integration patterns
+- Modern development tooling (ESLint, Prettier)
+
+**[View Template →](webapp-frontend/)**
+
+---
+
+### 🔌 API Service
+**Use for:** Backend API services, REST APIs, microservices
+
+**Includes:**
+- Express.js/FastAPI templates
+- Database migrations and models
+- JWT authentication patterns
+- Rate limiting and middleware
+
+**[View Template →](api-service/)**
+
+---
+
+### 📊 Data Science
+**Use for:** ML/Data Science workflows, model training, data analysis
+
+**Includes:**
+- Jupyter notebook structure (exploration, training, evaluation)
+- MLflow experiment tracking
+- Data validation workflows
+- Model training directives
+
+**[View Template →](data-science/)**
+
+---
+
+### 🖥️ CLI Tool
+**Use for:** Command-line applications, developer tools, utilities
+
+**Includes:**
+- Click framework setup
+- Rich terminal output
+- Configuration management
+- Testing and packaging setup
+
+**[View Template →](cli-tool/)**
+
+---
+
+### 📦 Library
+**Use for:** Reusable Python packages, libraries, SDKs
+
+**Includes:**
+- Proper package structure
 - API design directives
-- Authentication patterns
+- Testing and type checking
+- Documentation and distribution setup
 
----
-
-### 📊 Data Science *(Coming Soon)*
-**Use for:** ML/Data Science workflows
-
-**Will include:**
-- Jupyter notebook structure
-- Model training pipelines
-- Data versioning patterns
-- Experiment tracking setup
+**[View Template →](library/)**
 
 ---
 

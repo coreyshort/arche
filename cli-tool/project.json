@@ -1,0 +1,33 @@
+{
+  "name": "cli-tool",
+  "description": "Command-line application template",
+  "version": "1.0.0",
+  "category": "cli",
+  "language": "python",
+  "framework": "click",
+  "structure": {
+    "src/": "Application source code",
+    "src/cli/": "CLI command definitions",
+    "src/core/": "Business logic",
+    "src/utils/": "Helper functions",
+    "directives/": "Development workflow SOPs",
+    "execution/": "Utility scripts",
+    "tests/": "Test suite",
+    ".tmp/": "Temporary files"
+  },
+  "initialization": {
+    "steps": [
+      "python3 -m venv venv",
+      "source venv/bin/activate  # On Windows: venv\\Scripts\\activate",
+      "pip install -r requirements.txt",
+      "pip install -e .  # Install in development mode",
+      "cp .env.example .env"
+    ],
+    "run_command": "python -m src.cli --help"
+  },
+  "dependencies": {
+    "cli": ["click", "rich", "typer"],
+    "config": ["pyyaml", "python-dotenv"],
+    "testing": ["pytest", "pytest-cov"]
+  }
+}
