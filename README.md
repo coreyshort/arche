@@ -68,28 +68,66 @@ Arche supports different **modes**—fundamental architectural approaches for bu
 
 ## Quick Start
 
-### For 3-Layer Mode Projects
+Multiple ways to get started with arche—choose what works for your workflow:
 
-**Simplest start (1 minute):**
+### Option 1: Single Prompt (10 seconds)
 
-Tell your AI assistant to follow the 3-layer mode:
+Just tell your AI:
 ```
-Follow the 3-layer mode: https://raw.githubusercontent.com/coreyshort/arche/main/modes/3-layer/INSTRUCTIONS.md
+Follow arche 3-layer mode: https://raw.githubusercontent.com/coreyshort/arche/main/modes/3-layer/INSTRUCTIONS.md
 ```
 
-**Model-agnostic:** Works with Claude, ChatGPT, Copilot, Gemini, and any future AI.
+**That's it.** Your AI now operates using the 3-layer architecture.
 
-**Let AI select mode autonomously:**
+### Option 2: Single-Line Config File (30 seconds)
 
-AI agents can analyze your project and select the appropriate mode without human intervention:
+Add one line to your project:
+
+**For Cursor:**
+```bash
+echo "Follow: https://raw.githubusercontent.com/coreyshort/arche/main/modes/3-layer/INSTRUCTIONS.md" > .cursorrules
+```
+
+**For GitHub Copilot:**
+```bash
+echo "Follow: https://raw.githubusercontent.com/coreyshort/arche/main/modes/3-layer/INSTRUCTIONS.md" > .github/copilot-instructions.md
+```
+
+**For Claude Projects:**
+Add this to your project instructions:
+```
+Follow: https://raw.githubusercontent.com/coreyshort/arche/main/modes/3-layer/INSTRUCTIONS.md
+```
+
+### Option 3: AI Generates Entire Project (1 minute)
+
+Tell your AI:
+```
+Generate a new project using arche.
+Reference: https://raw.githubusercontent.com/coreyshort/arche/main/modes/3-layer/INSTRUCTIONS.md
+Project type: [automation/webapp/api/etc.]
+Description: [what you want to build]
+```
+
+Your AI will read the instructions, select the appropriate form, and bootstrap the full project structure.
+
+### Option 4: Let AI Select Mode Autonomously (1 minute)
+
+For more complex projects, let AI analyze and choose:
 ```
 Initialize an arche project for: [describe your project]
-Use the autonomous mode selection algorithm to choose the best mode.
+Use autonomous mode selection: https://raw.githubusercontent.com/coreyshort/arche/main/AUTONOMOUS_MODE_SELECTION.md
 ```
 
-The AI will analyze requirements, score modes, and bootstrap with the optimal choice. See [AUTONOMOUS_MODE_SELECTION.md](AUTONOMOUS_MODE_SELECTION.md).
+The AI will:
+1. Analyze your requirements
+2. Score all modes (3-layer, agentic-swarm, event-driven, rl-loop)
+3. Select the best fit
+4. Bootstrap with optimal structure
 
-**Full project setup (5 minutes):**
+### Option 5: Full Manual Setup (5 minutes)
+
+**For new projects using the bootstrap tool:**
 
 ```bash
 # Download bootstrap script
