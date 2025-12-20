@@ -70,16 +70,19 @@ The issue will be automatically labeled based on category and priority. Once app
 Approved improvements are incorporated via automated PR creation from GitHub Issues. They update template files at https://github.com/coreyshort/arche but do not directly update files for the current project.
 
 \*\*Bootstrapping New Projects:\*\*
-To initialize a new project from templates, use \`execution/bootstrap.py\`:
+To initialize a new project from templates, use the bootstrap tool from arche:
 \`\`\`bash
+\# Download bootstrap tool
+curl -O https://raw.githubusercontent.com/coreyshort/arche/main/tools/bootstrap.py
+
 \# Interactive mode (recommended)
-python execution/bootstrap.py --interactive
+python bootstrap.py --interactive
 
 \# Direct initialization
-python execution/bootstrap.py --type automation --name "My Project"
+python bootstrap.py --type automation --name "My Project"
 
 \# List available templates
-python execution/bootstrap.py --list
+python bootstrap.py --list
 \`\`\`
 
 \#\# File Organization
@@ -94,14 +97,13 @@ python execution/bootstrap.py --list
 \- \`directives/\` \- SOPs in Markdown (the instruction set)  
 \- \`.env\` \- Environment variables and API keys  
 \- \`credentials.json\`, \`token.json\` \- Google OAuth credentials (required files, in \`.gitignore\`)
-\- \`improvements/\` \- Learning log for continuous improvement
-\- \`template/\` \- Template files organized by project type
 
-\*\*Template directory structure:\*\*
-\- \`template/\_shared/\` \- Files common to all project types (agents.md, init_env.md, improvements.md)
+\*\*Arche repository structure (https://github.com/coreyshort/arche):\*\*
+\- \`tools/\` \- Utilities for interacting with arche (bootstrap.py, validators, issue creators)
+\- \`template/\_shared/\` \- Files common to all project types (agents.md, init_env.md)
 \- \`template/automation/\` \- Data processing, ETL, scripting projects
-\- \`template/webapp-fullstack/\` \- Frontend + Backend web applications (planned)
-\- \`template/api-service/\` \- Backend API services (planned)
+\- \`template/webapp-fullstack/\` \- Frontend + Backend web applications
+\- \`template/api-service/\` \- Backend API services
 \- \`template/data-science/\` \- ML/Data Science workflows (planned)
 
 \*\*Each project template includes:\*\*

@@ -72,7 +72,7 @@ Arche provides battle-tested project templates implementing a 3-layer architectu
 
 ```bash
 # Download bootstrap script
-curl -O https://raw.githubusercontent.com/coreyshort/arche/main/bootstrap.py
+curl -O https://raw.githubusercontent.com/coreyshort/arche/main/tools/bootstrap.py
 
 # Interactive mode - guided setup
 python bootstrap.py --interactive
@@ -168,8 +168,7 @@ template-name/
 
 All templates share these files from `_shared/`:
 - `agents.md` - Core 3-layer architecture instructions
-- `init_env.md` - Environment setup guide  
-- `improvements.md` - Template for tracking learnings
+- `init_env.md` - Environment setup guide
 
 ---
 
@@ -182,8 +181,6 @@ The architecture improves over time through continuous learning:
 3. **Test it** to ensure it works
 4. **Update the directive** with new learnings
 5. **System is now stronger** for next time
-
-Track all learnings in `improvements/IMPROVEMENTS.md` to build institutional knowledge.
 
 ---
 
