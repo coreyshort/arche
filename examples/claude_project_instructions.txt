@@ -1,0 +1,9 @@
+Follow the arche framework for reliable AI-assisted development.
+
+Read these instructions: https://raw.githubusercontent.com/coreyshort/arche/main/ARCHE_INSTRUCTIONS.md
+
+Quick principles:
+- Read directives/*.md to understand what to do
+- Call execution/* scripts to do the work  
+- Update directives as you learn
+- Self-anneal when things break

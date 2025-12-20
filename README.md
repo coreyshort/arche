@@ -28,7 +28,55 @@ Arche provides battle-tested project templates implementing a 3-layer architectu
 
 ## Getting Started with Arche
 
-### Quick Start (5 minutes)
+### Simplest Start (1 minute)
+
+**Already have a project?** Just teach your AI assistant about arche:
+
+**Option 1: Direct URL (works with most AI assistants)**
+```
+Read this file and follow its principles: https://raw.githubusercontent.com/coreyshort/arche/main/ARCHE_INSTRUCTIONS.md
+```
+
+**Option 2: Add to your AI configuration**
+
+Add this line to your AI assistant's custom instructions, project context, or `.cursorrules` file:
+```
+Follow the arche framework: https://raw.githubusercontent.com/coreyshort/arche/main/ARCHE_INSTRUCTIONS.md
+```
+
+**For Cursor IDE:**
+```bash
+# Add to .cursorrules in your project root
+echo "Follow the arche framework: https://raw.githubusercontent.com/coreyshort/arche/main/ARCHE_INSTRUCTIONS.md" > .cursorrules
+```
+
+**For GitHub Copilot:**
+Add `.github/COPILOT_INSTRUCTIONS.md` to your project with this content:
+```markdown
+Follow the arche framework: https://raw.githubusercontent.com/coreyshort/arche/main/ARCHE_INSTRUCTIONS.md
+```
+
+**For Claude Projects:**
+Add to Project Knowledge → Custom Instructions:
+```
+Follow the arche framework: https://raw.githubusercontent.com/coreyshort/arche/main/ARCHE_INSTRUCTIONS.md
+```
+
+**For ChatGPT:**
+Add to Custom Instructions (Settings → Personalization):
+```
+I'm working in projects using the arche framework: https://raw.githubusercontent.com/coreyshort/arche/main/ARCHE_INSTRUCTIONS.md
+```
+
+**Example configurations** available in [`examples/`](examples/) directory.
+
+That's it. Your AI now understands the 3-layer architecture and will work within the arche framework.
+
+---
+
+### Full Project Setup (5 minutes)
+
+**Want the complete project structure with templates?**
 
 **1. Bootstrap a new project:**
 ```bash

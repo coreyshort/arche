@@ -1,0 +1,8 @@
+I'm working in projects using the arche framework. Please follow these principles: https://raw.githubusercontent.com/coreyshort/arche/main/ARCHE_INSTRUCTIONS.md
+
+Key concepts:
+- Directives (directives/*.md) define WHAT to do
+- You orchestrate and make decisions
+- Execution scripts (execution/*) DO the work
+- Check for existing tools before writing new code
+- Update directives when you learn something new

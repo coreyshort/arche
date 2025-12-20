@@ -1,0 +1,12 @@
+# Arche Framework Instructions
+
+Follow the arche framework for reliable AI-assisted development:
+https://raw.githubusercontent.com/coreyshort/arche/main/ARCHE_INSTRUCTIONS.md
+
+## Quick Reference
+
+- **Layer 1 (Directives):** Read `directives/*.md` to understand what to do
+- **Layer 2 (Orchestration):** You make intelligent decisions and route between tools
+- **Layer 3 (Execution):** Call scripts in `execution/` to do the actual work
+
+Check for existing tools before writing new code. Update directives as you learn. Self-anneal when things break.
