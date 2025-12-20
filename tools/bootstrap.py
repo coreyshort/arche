@@ -103,7 +103,7 @@ def fetch_template_recursive(
 
 def list_available_templates(branch: str = "main") -> List[str]:
     """List available template types from GitHub."""
-    contents = fetch_directory_tree("", branch)
+    contents = fetch_directory_tree("forms", branch)
     if not contents:
         return []
     
@@ -116,7 +116,7 @@ def list_available_templates(branch: str = "main") -> List[str]:
 
 def fetch_project_json(template_type: str, branch: str = "main") -> Optional[Dict]:
     """Fetch project.json metadata for a template."""
-    url = f"{RAW_URL}/{branch}/{template_type}/project.json"
+    url = f"{RAW_URL}/{branch}/forms/{template_type}/project.json"
     try:
         with urllib.request.urlopen(url) as response:
             return json.loads(response.read())
@@ -156,7 +156,7 @@ def initialize_project(
     # Fetch template-specific files
     print(f"\nFetching {template_type} template files...")
     template_count = fetch_template_recursive(
-        template_type, 
+        f"forms/{template_type}", 
         target_dir, 
         branch,
         exclude=["project.json"]  # Don't copy project.json to target

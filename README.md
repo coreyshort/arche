@@ -29,7 +29,7 @@ Arche provides battle-tested project templates implementing a 3-layer architectu
 - Data management structure (`.tmp/`, `local_data/`)
 - Common dependencies (pandas, openpyxl, dotenv)
 
-**[View Template →](automation/)**
+**[View Template →](forms/automation/)**
 
 ---
 
@@ -42,7 +42,7 @@ Arche provides battle-tested project templates implementing a 3-layer architectu
 - Shared types and utilities
 - Docker setup for services
 
-**[View Template →](webapp-fullstack/)**
+**[View Template →](forms/webapp-fullstack/)**
 
 ---
 
@@ -55,7 +55,7 @@ Arche provides battle-tested project templates implementing a 3-layer architectu
 - API service integration patterns
 - Modern development tooling (ESLint, Prettier)
 
-**[View Template →](webapp-frontend/)**
+**[View Template →](forms/webapp-frontend/)**
 
 ---
 
@@ -68,7 +68,7 @@ Arche provides battle-tested project templates implementing a 3-layer architectu
 - JWT authentication patterns
 - Rate limiting and middleware
 
-**[View Template →](api-service/)**
+**[View Template →](forms/api-service/)**
 
 ---
 
@@ -81,7 +81,7 @@ Arche provides battle-tested project templates implementing a 3-layer architectu
 - Data validation workflows
 - Model training directives
 
-**[View Template →](data-science/)**
+**[View Template →](forms/data-science/)**
 
 ---
 
@@ -94,7 +94,7 @@ Arche provides battle-tested project templates implementing a 3-layer architectu
 - Configuration management
 - Testing and packaging setup
 
-**[View Template →](cli-tool/)**
+**[View Template →](forms/cli-tool/)**
 
 ---
 
@@ -107,7 +107,7 @@ Arche provides battle-tested project templates implementing a 3-layer architectu
 - Testing and type checking
 - Documentation and distribution setup
 
-**[View Template →](library/)**
+**[View Template →](forms/library/)**
 
 ---
 
@@ -193,7 +193,7 @@ nano .env  # or your preferred editor
 
 ---
 
-## Template Structure
+## Project Structure
 
 Each template follows this organization:
 

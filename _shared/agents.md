@@ -107,13 +107,14 @@ python bootstrap.py --list
 \*\*Arche repository structure (https://github.com/coreyshort/arche):\*\*
 \- \`tools/\` \- Utilities for interacting with arche (bootstrap.py, validators, issue creators)
 \- \`template/\_shared/\` \- Files common to all project types (agents.md, init_env.md)
-\- \`template/automation/\` \- Data processing, ETL, scripting projects
-\- \`template/webapp-fullstack/\` \- Frontend + Backend web applications
-\- \`template/webapp-frontend/\` \- Frontend-only web applications (React, Vue)
-\- \`template/api-service/\` \- Backend API services
-\- \`template/data-science/\` \- ML/Data Science workflows
-\- \`template/cli-tool/\` \- Command-line applications
-\- \`template/library/\` \- Reusable Python packages/libraries
+\- \`template/forms/\` \- Project type templates:
+  \- \`automation/\` \- Data processing, ETL, scripting projects
+  \- \`webapp-fullstack/\` \- Frontend + Backend web applications
+  \- \`webapp-frontend/\` \- Frontend-only web applications (React, Vue)
+  \- \`api-service/\` \- Backend API services
+  \- \`data-science/\` \- ML/Data Science workflows
+  \- \`cli-tool/\` \- Command-line applications
+  \- \`library/\` \- Reusable Python packages/libraries
 
 \*\*Each project template includes:\*\*
 \- \`project.json\` \- Metadata defining initialization steps and requirements
