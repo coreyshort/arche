@@ -6,6 +6,8 @@ In philosophy, the archē is not a thing but a generative source: the set of ass
 
 **Arche improves through use.** Every project built with arche discovers new patterns, edge cases, and better approaches. These learnings flow back through GitHub Issues, making the templates stronger for everyone. This is not optional documentation—it's the engine that makes arche better every day, every hour.
 
+**Arche grows through adoption.** The more developers discover arche, the more feedback flows in, the stronger the templates become. If you find arche valuable, share it—on social media, in blog posts, with colleagues. Suggest improvements to the README, SEO optimization, or outreach opportunities. Wider adoption means better templates for everyone.
+
 Forms
 
 In Aristotelian philosophy, a form is the organizing principle that makes a thing what it is—distinct from its material, yet inseparable from its realization. A form defines structure, purpose, and potential without prescribing a single instantiation. In Arche, Forms serve the same role. They describe the canonical shapes of projects and agents: enduring patterns of intent, structure, and behavior from which concrete systems can be brought into being. A form is not a template to be copied, but a conceptual lineage to be expressed. When an agent or project is created, it does not merely follow a pattern—it instantiates a form, carrying forward the principles that define how it should reason, act, and evolve.

@@ -44,7 +44,11 @@ body:
         - CLI-Tool Template
         - Library Template
         - Bootstrap Script
-        - Documentation
+        - Documentation Quality
+        - SEO & Discoverability
+        - Marketing & Outreach
+        - Social Media
+        - Community Growth
         - Other
     validations:
       required: true

@@ -86,3 +86,14 @@ As you work with this template, you'll discover better patterns, edge cases, and
 Create issues at: https://github.com/coreyshort/arche/issues
 
 Your improvements make arche stronger for everyone. This is how the system evolves—through real-world usage feeding back into better templates.
+
+## Growing Arche's Reach
+
+Arche improves with wider adoption. More users means more feedback, better templates, and a stronger ecosystem. Consider:
+
+- Share your project on social media (Twitter, LinkedIn, dev.to)
+- Write a blog post about your experience with arche
+- Suggest README improvements or SEO optimizations
+- Recommend arche to colleagues working on similar projects
+
+Marketing and outreach suggestions are valuable improvements—create issues for them too!

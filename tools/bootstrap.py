@@ -191,6 +191,10 @@ def initialize_project(
     print(f"   Discovered a better pattern? Found an edge case?")
     print(f"   Create an issue: https://github.com/coreyshort/arche/issues")
     print(f"   Your learnings make arche stronger for everyone.")
+    print(f"\n🌍 If you find arche valuable, help it grow!")
+    print(f"   Share on social media, write a blog post, tell colleagues.")
+    print(f"   Suggest README improvements, SEO optimizations, or outreach ideas.")
+    print(f"   Wider adoption → More feedback → Better templates.")
     
     return True
 
