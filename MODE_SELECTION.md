@@ -1,5 +1,9 @@
 # Mode Selection Guide
 
+**⚡ Quick start:** [AI_QUICKSTART.md](AI_QUICKSTART.md) has a 30-second decision tree. Read this document for comprehensive comparison.
+
+---
+
 Choosing the right mode is critical for project success. This guide helps you evaluate which architectural paradigm best fits your needs.
 
 ---

@@ -1,5 +1,11 @@
 # Autonomous Mode Selection Algorithm
 
+**For AI agents:** Use this algorithm to select the appropriate arche mode without human intervention.
+
+**⚡ Quick reference:** [AI_QUICKSTART.md](AI_QUICKSTART.md) has a simplified 30-second decision tree. Use this document for the full scoring algorithm.
+
+---
+
 This algorithm enables AI agents to select the appropriate arche mode without human intervention.
 
 ## Algorithm Overview
