@@ -146,10 +146,16 @@ def initialize_project(
     branch: str = "main",
     enable_telemetry: Optional[bool] = None
 ) -> bool:
-    """Initialize a new project from a mode/form."""
+    """
+    Initialize a new project from a mode/form.
+    
+    This function uses selective sync - only files from the selected mode are copied.
+    Other modes, forms, and cross-mode documentation remain in the repository.
+    This keeps projects lightweight and focused on their specific architectural pattern.
+    """
     
     print(f"\n🚀 Initializing project from Arche")
-    print(f"   Mode: {mode}")
+    print(f"   Mode: {mode} (selective sync - only this mode's files)")
     print(f"   Form: {form}")
     print(f"   Source: {REPO_URL}")
     print(f"   Branch: {branch}")
@@ -230,6 +236,10 @@ def initialize_project(
     print(f"   Files copied: {total_files}")
     print(f"   Mode: {mode}")
     print(f"   Form: {form}")
+    print(f"\n💡 Selective Sync")
+    print(f"   Only {mode} mode files were copied to your project.")
+    print(f"   Other modes remain in the arche repository.")
+    print(f"   Reference documentation at: {REPO_URL}")
     
     # Next steps
     print(f"\n📋 Next steps:")

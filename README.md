@@ -56,6 +56,38 @@ Arche supports different **modes**—fundamental architectural approaches for bu
 
 ---
 
+## Architecture & Selective Sync
+
+**Arche grows, your project doesn't.**
+
+As arche evolves with more modes, forms, and patterns, individual projects stay lightweight through **selective sync**:
+
+- **What's copied:** Only the mode and form you select
+- **What's referenced:** Cross-mode documentation (MODE_SELECTION.md, TELEMETRY.md) via URLs
+- **What's excluded:** All other modes, forms, and templates
+
+**Example:** A 3-layer/automation project gets:
+- `modes/3-layer/_shared/` (agents.md, init_env.md)
+- `modes/3-layer/forms/automation/` (project structure, requirements.txt, README template)
+- **Not:** agentic-swarm, event-driven, rl-loop, or any other modes
+
+**Benefits:**
+- Lightweight projects focused on one architectural pattern
+- Faster bootstrap and setup
+- No confusion from unrelated modes
+- Clear separation of concerns
+- Repository can grow without bloating projects
+
+**Accessing other modes:**
+If your project evolves and needs a different mode:
+1. Reference mode documentation at GitHub URLs
+2. Bootstrap a new project with the new mode
+3. Migrate your code to the new structure
+
+**AI agents automatically understand this:** When working in a project, they only see the selected mode's files and reference other modes via URLs when needed.
+
+---
+
 ## The Philosophy
 
 **Arche improves through use.** Every project built with arche discovers new patterns, edge cases, and better approaches. These learnings flow back through GitHub Issues, making the framework stronger for everyone.
@@ -139,6 +171,8 @@ python bootstrap.py --interactive
 # Or direct initialization
 python bootstrap.py --mode 3-layer --form automation --target my-project
 ```
+
+**Selective Sync:** Bootstrap only copies files from your selected mode. Other modes stay in the repository, keeping your project lightweight and focused.
 
 See [3-layer mode documentation](modes/3-layer/MODE.md) for details.
 
