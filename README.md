@@ -70,6 +70,15 @@ Add to Custom Instructions (Settings → Personalization):
 I'm working in projects using the arche framework: https://raw.githubusercontent.com/coreyshort/arche/main/ARCHE_INSTRUCTIONS.md
 ```
 
+**For Gemini:**
+Add to Gem instructions or provide in conversation:
+```
+Follow the arche framework: https://raw.githubusercontent.com/coreyshort/arche/main/ARCHE_INSTRUCTIONS.md
+```
+
+**For any other AI:**
+Simply ask it to read the URL above. The instructions are model-agnostic markdown.
+
 **Example configurations** available in [`examples/`](examples/) directory.
 
 That's it. Your AI now understands the 3-layer architecture and will work within the arche framework.
