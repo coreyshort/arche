@@ -10,6 +10,12 @@ body:
         
         This template helps capture improvements with enough detail for automated implementation.
         
+        **Types of improvements:**
+        - Improvements to existing modes/forms
+        - New features or better patterns
+        - Documentation and discoverability
+        - **New mode proposals** (when real-world patterns emerge)
+        
         **How this works:**
         1. You submit this issue with implementation details
         2. Issue is automatically labeled by category/priority

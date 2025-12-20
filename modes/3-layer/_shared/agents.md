@@ -77,8 +77,25 @@ Improvements aren't just code. They're anything that helps more people benefit f
 \- \*\*Discoverability:\*\* Better descriptions, topics, examples that help people find what they need
 \- \*\*Knowledge Sharing:\*\* Blog posts explaining your experience, tutorials, case studies
 \- \*\*Community:\*\* Contributing guides, thoughtful discussions, helping others
+\- \*\*New Modes:\*\* Propose entirely new architectural paradigms when patterns emerge
 
 The goal isn't marketing—it's making good tools accessible to everyone who needs them.
+
+\*\*Considering New Modes:\*\*
+As you work on projects, \*\*periodically reflect on whether emerging patterns suggest new modes:\*\*
+
+\- Are you repeatedly working around limitations of the current mode?
+\- Do you see industry trends toward a different architectural pattern?
+\- Would a fundamentally different approach (multi-agent, event-driven, learning-based) better fit certain use cases?
+\- Are production systems using patterns not captured by existing modes?
+
+When you notice these signals, create a GitHub Issue proposing a new mode. Include:
+\- Real-world examples demonstrating the pattern
+\- Why existing modes don't address this paradigm
+\- What problems the new mode would solve
+\- Initial thoughts on structure (what would \_shared/ contain, what forms might exist)
+
+\*\*New modes must emerge from production use, not theory.\*\* They require demonstrated patterns working reliably in practice.
 
 \*\*Permissions & Workflow:\*\*
 \- \*\*You (AI agent):\*\* Create GitHub Issues with implementation details (no repo access needed)
