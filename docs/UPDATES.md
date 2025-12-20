@@ -142,13 +142,13 @@ The update tool is downloaded on first use:
 
 ```bash
 # Check for updates
-python -c "$(curl -fsSL https://raw.githubusercontent.com/coreyshort/arche/main/scripts/check_updates.py)"
+python -c "$(curl -fsSL https://raw.githubusercontent.com/coreyshort/arche/main/arche-tools/check_updates.py)"
 ```
 
 Or download it once:
 
 ```bash
-curl -O https://raw.githubusercontent.com/coreyshort/arche/main/scripts/update_arche.py
+curl -O https://raw.githubusercontent.com/coreyshort/arche/main/arche-tools/update_arche.py
 python update_arche.py --check
 ```
 

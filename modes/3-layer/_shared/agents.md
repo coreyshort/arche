@@ -186,7 +186,7 @@ Approved improvements are incorporated via automated PR creation from GitHub Iss
 To initialize a new project from templates, use the bootstrap script from arche:
 \`\`\`bash
 \# Download bootstrap script
-curl -O https://raw.githubusercontent.com/coreyshort/arche/main/scripts/bootstrap.py
+curl -O https://raw.githubusercontent.com/coreyshort/arche/main/arche-tools/bootstrap.py
 
 \# Interactive mode (recommended)
 python bootstrap.py --interactive
@@ -214,7 +214,7 @@ python bootstrap.py --list
 \*\*Arche repository structure (https://github.com/coreyshort/arche):\*\*
 \- \`modes/\` \- Architectural paradigms (3-layer, agentic-swarm, event-driven, rl-loop)
   \- Each mode has: MODE.md (documentation), INSTRUCTIONS.md (AI config), \_shared/ (common files), forms/ (project templates)
-\- \`scripts/\` \- Arche management scripts (bootstrap.py, update_arche.py)
+\- \`arche-tools/\` \- Arche management utilities (bootstrap.py, update_arche.py)
 \- \`examples/\` \- AI configuration examples, prompts, single-line setups
 \- \`.github/\` \- Issue templates, workflows, contribution guides
 \- Root: README.md, MODE_MATURITY.md, MODE_SELECTION.md, AUTONOMOUS_MODE_SELECTION.md, TELEMETRY.md
