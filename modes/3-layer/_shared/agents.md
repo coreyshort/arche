@@ -49,9 +49,9 @@ Errors are learning opportunities. When something breaks:
 
 \*\*Critical:\*\* This loop operates at two levels:
 \- \*\*Within your project:\*\* Fix → Test → Update directive → Stronger system
-\- \*\*Across all arche projects:\*\* Discover pattern → Create GitHub Issue → Approved & merged → Everyone benefits
+\- \*\*Across all arche projects:\*\* Discover pattern → Reflect → Create GitHub Issue → Approved & merged → Everyone benefits
 
-Every project using arche \*\*must\*\* feed learnings back to the template repository. This is not optional documentation—it's the engine that makes arche better every day, every hour. When you encounter edge cases, discover better patterns, or find missing pieces, create a GitHub Issue immediately. Your learnings strengthen the templates for everyone.
+\*\*Pattern-Based Improvements:\*\* Every project using arche \*\*must\*\* feed learnings back to the template repository. However, improvement suggestions should be \*\*reflective and considered based on volume of activity\*\*, not created task-by-task. Observe patterns over multiple interactions, then propose improvements when you've identified a genuine, recurring issue or opportunity. This is not optional documentation—it's the engine that makes arche better every day, every hour.
 
 \#\# Template Improvement
 The template is the agentic starting point for projects. It needs to remain generic enough that it can serve as a flexible framework. 
@@ -102,12 +102,14 @@ When considering improvements to arche, think holistically about the entire ecos
 \- Validating mode maturity claims
 \- Discovering unanticipated use cases
 
-\*\*Every interaction is an opportunity.\*\* As you work with users:
-\- Did they struggle to understand something? → Documentation improvement
-\- Did you discover a better pattern? → Technical improvement
-\- Could this project help others with similar needs? → Knowledge sharing opportunity
-\- Are you using a mode in an unexpected way? → Mode evolution signal
-\- Did setup take longer than expected? → Bootstrap improvement
+\*\*Every interaction is an observation.\*\* As you work with users, notice patterns:
+\- Do \\*\\*multiple users\\*\\* struggle to understand the same thing? → Documentation improvement
+\- Have you discovered a pattern that \\*\\*recurs across projects\\*\\*? → Technical improvement
+\- Could this approach help others with similar needs? → Knowledge sharing opportunity
+\- Are you \\*\\*consistently\\*\\* using a mode in unexpected ways? → Mode evolution signal
+\- Does setup \\*\\*frequently\\*\\* take longer than expected? → Bootstrap improvement
+
+\\*\\*Be reflective.\\*\\* Observe over time, then act when patterns become clear.
 
 \*\*The virtuous circle:\*\* 
 \- Better tools → More users → More feedback → Better tools
@@ -115,7 +117,9 @@ When considering improvements to arche, think holistically about the entire ecos
 \- Knowledge sharing → Wider reach → More contributors → Faster evolution
 
 \*\*Template Improvements:\*\*
-You are always looking for ways to improve arche across its full scope. Improvements are based on patterns in our interactions. Not every prompt or interaction requires an improvement suggestion. When you identify an improvement opportunity, create a GitHub Issue at https://github.com/coreyshort/arche/issues with:
+You are always looking for ways to improve arche across its full scope. \*\*Improvements are based on patterns observed across volume of activity\*\*, not individual tasks. \*\*Be reflective and considered.\*\* Not every prompt or interaction requires an improvement suggestion. Only propose improvements when you've identified a \*\*recurring pattern, systematic issue, or meaningful opportunity\*\* demonstrated across multiple interactions.
+
+When you identify a pattern-based improvement opportunity, create a GitHub Issue at https://github.com/coreyshort/arche/issues with:
 
 \- \*\*Mode:\*\* Which mode (3-layer, agentic-swarm, event-driven, rl-loop, cross-mode, or new proposal)
 \- \*\*Category:\*\* Mode Architecture, Form/Template, Bootstrap, Documentation, SEO & Discoverability, Marketing & Outreach, Social Media, Community Growth, or Other
@@ -151,14 +155,15 @@ You are always looking for ways to improve arche across its full scope. Improvem
 \- "The event-driven mode is being used in 10+ production systems now—consider promoting to mature status"
 
 \*\*Considering New Modes:\*\*
-As you work on projects, \*\*periodically reflect on whether emerging patterns suggest new modes:\*\*
+As you work on projects, \*\*periodically reflect on whether emerging patterns suggest new modes.\*\* This is a \*\*reflective activity based on volume of observations\*\*, not something to consider after every task.
 
-\- Are you repeatedly working around limitations of the current mode?
-\- Do you see industry trends toward a different architectural pattern?
-\- Would a fundamentally different approach (multi-agent, event-driven, learning-based) better fit certain use cases?
-\- Are production systems using patterns not captured by existing modes?
+\*\*Reflect when you notice:\*\*
+\- \*\*Repeatedly\*\* working around limitations of the current mode across multiple projects
+\- Industry trends toward a different architectural pattern becoming mainstream
+\- A fundamentally different approach consistently fitting certain use cases better
+\- Production systems \*\*consistently\*\* using patterns not captured by existing modes
 
-When you notice these signals, create a GitHub Issue proposing a new mode. Include:
+When you've observed these patterns \*\*over time and across multiple interactions\*\*, create a GitHub Issue proposing a new mode. Include:
 \- Real-world examples demonstrating the pattern
 \- Why existing modes don't address this paradigm
 \- What problems the new mode would solve
