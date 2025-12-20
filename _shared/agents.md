@@ -64,7 +64,13 @@ You are always looking for ways to improve the template. Improvements are based 
 \- \*\*Suggested Commit Message:\*\* Conventional commit format (feat/fix/docs/refactor)
 \- \*\*Testing Steps:\*\* How to validate the improvement works
 
-The issue will be automatically labeled based on category and priority. Once approved (labeled \`status:approved\`), a GitHub Action will automatically create a PR with your suggested changes.
+\*\*Permissions & Workflow:\*\*
+\- \*\*You (AI agent):\*\* Create GitHub Issues with implementation details (no repo access needed)
+\- \*\*Arche maintainer:\*\* Reviews issue and adds \`status:approved\` label
+\- \*\*GitHub Actions:\*\* Automatically creates PR from approved issue
+\- \*\*Arche maintainer:\*\* Reviews and merges PR
+
+The issue will be automatically labeled based on category and priority. You do NOT need write access to the arche repository—only the ability to create issues. All changes go through the maintainer approval process.
 
 \*\*Improvements Incorporation:\*\*
 Approved improvements are incorporated via automated PR creation from GitHub Issues. They update template files at https://github.com/coreyshort/arche but do not directly update files for the current project.

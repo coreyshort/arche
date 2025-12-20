@@ -28,10 +28,13 @@ python bootstrap.py --type automation --branch v1.0.0
 
 **Features:**
 - ✅ No dependencies (pure Python stdlib)
+- ✅ No authentication required (uses public GitHub API)
 - ✅ Smart fetching (only downloads needed files)
 - ✅ Interactive guided setup
 - ✅ Version pinning support
 - ✅ Template validation
+
+**Note:** Uses GitHub's public API which has rate limits for unauthenticated requests (60/hour per IP). For heavy usage, you can set a `GITHUB_TOKEN` environment variable to increase limits.
 
 ---
 

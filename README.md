@@ -249,25 +249,29 @@ When AI writes all code directly, small errors compound:
 
 Have a project type that would benefit from this architecture?
 
-1. Fork this repository
-2. Create your template in a new directory (e.g., `cli-tool/`)
-3. Include required files:
-   - `project.json` - Template metadata
-   - Configuration files (`.gitignore`, `.env.example`, dependencies)
-   - `README.md` - Template-specific documentation
-   - Example directive and execution files
-4. Test with `bootstrap.py --type your-template`
-5. Submit a pull request
+**Propose a new template:**
+1. Create a GitHub Issue at https://github.com/coreyshort/arche/issues
+2. Use the "Template Improvement" template
+3. Include:
+   - Category: Select "template-new" or relevant category
+   - Use case description and target users
+   - Proposed directory structure
+   - Required dependencies and configuration
+   - Example directive and execution patterns
+4. Maintainer will review and create implementation PR
 
-### Template Checklist
+**You do NOT need fork/write access**—the improvement workflow handles everything through GitHub Issues.
 
+### Template Design Guidelines
+
+When proposing templates:
 - [ ] Clear use case and description
 - [ ] `project.json` with all metadata
 - [ ] Example directive showing SOP structure
 - [ ] Example execution script demonstrating patterns
 - [ ] Sensible defaults for common tools
 - [ ] Documentation explaining the workflow
-- [ ] Works with bootstrap script
+- [ ] Compatible with bootstrap script
 
 ---
 
