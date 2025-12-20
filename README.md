@@ -296,6 +296,31 @@ As new paradigms emerge—agent mesh networks, quantum-enhanced reasoning, biolo
 - **Issues & Contributions:** https://github.com/coreyshort/arche/issues
 - **Discussions:** https://github.com/coreyshort/arche/discussions
 
+## Examples
+
+The `examples/` directory contains:
+
+**Single-line config files:**
+- `.cursorrules` - Cursor editor (single line)
+- `.github-copilot-instructions.md` - GitHub Copilot (single line)
+- `claude-project-instructions.md` - Claude Projects (single line)
+
+**Prompt templates:**
+- `prompts.md` - Copy-paste prompts for different scenarios
+  - Use existing project
+  - Generate new project
+  - Auto-select mode
+  - Explore and learn
+  - Add to complex project
+
+**Model-specific examples:**
+- `github-copilot-instructions.md` - Full GitHub Copilot setup
+- `claude-project-custom-instructions.md` - Full Claude Projects setup
+- `chatgpt-custom-instructions.md` - Full ChatGPT setup
+- `gemini-instructions.md` - Full Google Gemini setup
+
+Each file demonstrates how to reference mode-specific instructions for that AI tool.
+
 ---
 
 ## Forms
