@@ -6,51 +6,49 @@ In philosophy, the archē is not a thing but a generative source: the set of ass
 
 **Arche doesn't prescribe one approach.** It provides a foundation for multiple modes of agentic development, each suited to different paradigms. As the world of agents evolves, new modes emerge independently based on market and industry evolution.
 
+**Modes have maturity levels** that evolve as they gain adoption and stability. See [MODE_MATURITY.md](MODE_MATURITY.md) for the maturity model.
+
 ---
 
 ## Modes: Multiple Paradigms, One Foundation
 
 Arche supports different **modes**—fundamental architectural approaches for building agentic systems. Each mode addresses different problems and fits different use cases.
 
-### 🏛️ 3-Layer Mode (Mature)
+### ✅ 3-Layer Mode (Mature)
 
 **Paradigm:** Deterministic execution with AI orchestration  
-**Best for:** Reliability-critical projects, data processing, automation
-
-**Status:** Battle-tested and production-ready
+**Best for:** Reliability-critical projects, data processing, automation  
+**Maturity:** Mature - 50+ production projects, battle-tested patterns, stable ecosystem
 
 [Learn about 3-layer mode →](modes/3-layer/MODE.md)
 
 ---
 
-### 🐝 Agentic Swarm Mode (Emerging)
+### � Agentic Swarm Mode (Emerging)
 
 **Paradigm:** Multi-agent coordination and collaboration  
-**Best for:** Complex systems requiring specialized agents working together
-
-**Status:** Emerging—patterns being discovered in production
+**Best for:** Complex systems requiring specialized agents working together  
+**Maturity:** Emerging - Patterns being discovered in production, structure being shaped
 
 [Learn about agentic-swarm mode →](modes/agentic-swarm/MODE.md)
 
 ---
 
-### ⚡ Event-Driven Mode (Emerging)
+### 🚀 Event-Driven Mode (Emerging)
 
 **Paradigm:** Reactive agents responding to event streams  
-**Best for:** Real-time systems, webhooks, message queues, IoT
-
-**Status:** Emerging—patterns being discovered in production
+**Best for:** Real-time systems, webhooks, message queues, IoT  
+**Maturity:** Emerging - Patterns being discovered in production, structure being shaped
 
 [Learn about event-driven mode →](modes/event-driven/MODE.md)
 
 ---
 
-### 🎯 Reinforcement Learning Loop Mode (Emerging)
+### 🚀 Reinforcement Learning Loop Mode (Emerging)
 
 **Paradigm:** Agents learning from outcomes over time  
-**Best for:** Optimization, personalization, adaptive systems
-
-**Status:** Emerging—patterns being discovered in production
+**Best for:** Optimization, personalization, adaptive systems  
+**Maturity:** Emerging - Patterns being discovered in production, structure being shaped
 
 [Learn about rl-loop mode →](modes/rl-loop/MODE.md)
 

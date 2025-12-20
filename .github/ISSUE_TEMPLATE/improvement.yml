@@ -40,12 +40,13 @@ body:
       label: Mode
       description: Which mode does this improvement target?
       options:
-        - "3-layer (deterministic execution)"
-        - "agentic-swarm (multi-agent coordination)"
-        - "event-driven (reactive agents)"
-        - "rl-loop (reinforcement learning)"
-        - "New mode proposal"
-        - "Cross-mode / Framework-wide"
+        - "✅ 3-layer (Mature)"
+        - "🚀 agentic-swarm (Emerging)"
+        - "🚀 event-driven (Emerging)"
+        - "🚀 rl-loop (Emerging)"
+        - "🌱 New mode proposal"
+        - "📊 Mode status update (maturity level change)"
+        - "🔧 Cross-mode / Framework-wide"
     validations:
       required: true
 
