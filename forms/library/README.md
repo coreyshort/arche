@@ -146,3 +146,15 @@ This project uses [Semantic Versioning](https://semver.org/):
 - MAJOR.MINOR.PATCH
 - Update version in `setup.py`
 - Tag releases: `git tag v0.1.0`
+
+## Contributing Back to Arche
+
+As you work with this template, you'll discover better patterns, edge cases, and improvements. **Please contribute these learnings back:**
+
+- Found a missing dependency? Create an issue.
+- Discovered a better workflow? Share it.
+- Hit an edge case? Document it.
+
+Create issues at: https://github.com/coreyshort/arche/issues
+
+Your improvements make arche stronger for everyone. This is how the system evolves—through real-world usage feeding back into better templates.

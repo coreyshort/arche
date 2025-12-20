@@ -47,6 +47,12 @@ Errors are learning opportunities. When something breaks:
 4\. Update directive to include new flow  
 5\. System is now stronger
 
+\*\*Critical:\*\* This loop operates at two levels:
+\- \*\*Within your project:\*\* Fix → Test → Update directive → Stronger system
+\- \*\*Across all arche projects:\*\* Discover pattern → Create GitHub Issue → Approved & merged → Everyone benefits
+
+Every project using arche \*\*must\*\* feed learnings back to the template repository. This is not optional documentation—it's the engine that makes arche better every day, every hour. When you encounter edge cases, discover better patterns, or find missing pieces, create a GitHub Issue immediately. Your learnings strengthen the templates for everyone.
+
 \#\# Template Improvement
 The template is the agentic starting point for projects. It needs to remain generic enough that it can serve as a flexible framework. 
 

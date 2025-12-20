@@ -186,6 +186,12 @@ def initialize_project(
         print(f"   cd {target_dir}")
         print(f"   # Follow setup instructions in README.md")
     
+    # Feedback reminder
+    print(f"\n💡 Remember: As you work, contribute improvements back to arche!")
+    print(f"   Discovered a better pattern? Found an edge case?")
+    print(f"   Create an issue: https://github.com/coreyshort/arche/issues")
+    print(f"   Your learnings make arche stronger for everyone.")
+    
     return True
 
 

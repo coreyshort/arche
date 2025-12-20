@@ -4,6 +4,8 @@
 
 In philosophy, the archē is not a thing but a generative source: the set of assumptions, structures, and forces that make creation possible. Arche exists in that same spirit. It is not an agent, but the framework from which agents emerge—defining how intent becomes action, how reasoning is shaped, and how systems learn to build themselves. When an agent says "Arche built this," it reflects a lineage: a common origin of patterns, constraints, and principles that guide autonomous work without prescribing its outcomes.
 
+**Arche improves through use.** Every project built with arche discovers new patterns, edge cases, and better approaches. These learnings flow back through GitHub Issues, making the templates stronger for everyone. This is not optional documentation—it's the engine that makes arche better every day, every hour.
+
 Forms
 
 In Aristotelian philosophy, a form is the organizing principle that makes a thing what it is—distinct from its material, yet inseparable from its realization. A form defines structure, purpose, and potential without prescribing a single instantiation. In Arche, Forms serve the same role. They describe the canonical shapes of projects and agents: enduring patterns of intent, structure, and behavior from which concrete systems can be brought into being. A form is not a template to be copied, but a conceptual lineage to be expressed. When an agent or project is created, it does not merely follow a pattern—it instantiates a form, carrying forward the principles that define how it should reason, act, and evolve.
@@ -195,6 +197,16 @@ nano .env  # or your preferred editor
 - **Create execution scripts** in `execution/` for deterministic operations
 - **Let AI orchestrate** between directives and execution
 
+### 4. Feed Back Improvements
+
+**Critical:** As you work, you'll discover patterns, edge cases, and better approaches. Create GitHub Issues at https://github.com/coreyshort/arche/issues when you find:
+- Better ways to structure directives
+- Common pitfalls in template setup
+- Missing dependencies or configuration
+- Workflow improvements
+
+Your learnings make arche stronger for everyone. This feedback loop is how the system evolves.
+
 ---
 
 ## Project Structure
@@ -223,13 +235,22 @@ All templates share these files from `_shared/`:
 
 ## The Self-Annealing Loop
 
-The architecture improves over time through continuous learning:
+The architecture improves at two levels:
 
-1. **Encounter an issue** during development
-2. **Fix the execution script** (deterministic code)
-3. **Test it** to ensure it works
-4. **Update the directive** with new learnings
-5. **System is now stronger** for next time
+**Within Your Project:**
+1. Encounter an issue during development
+2. Fix the execution script (deterministic code)
+3. Test it to ensure it works
+4. Update the directive with new learnings
+5. Your system is now stronger
+
+**Across All Arche Projects:**
+1. Discover patterns, edge cases, or improvements
+2. Create a GitHub Issue with implementation details
+3. Maintainer approves and merges the improvement
+4. All future projects benefit from your learning
+
+**This is not optional.** The feedback loop from real-world usage to template improvement is what makes arche evolve. Every project using arche should contribute back—making the system better every day, every hour.
 
 ---
 
