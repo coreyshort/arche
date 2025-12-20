@@ -32,6 +32,8 @@ Arche provides battle-tested project templates implementing a 3-layer architectu
 
 **Already have a project?** Just teach your AI assistant about arche:
 
+**Model-agnostic:** Works with Claude, ChatGPT, GitHub Copilot, Gemini, and any future AI that can read markdown.
+
 **Option 1: Direct URL (works with most AI assistants)**
 ```
 Read this file and follow its principles: https://raw.githubusercontent.com/coreyshort/arche/main/ARCHE_INSTRUCTIONS.md
@@ -44,7 +46,7 @@ Add this line to your AI assistant's custom instructions, project context, or `.
 Follow the arche framework: https://raw.githubusercontent.com/coreyshort/arche/main/ARCHE_INSTRUCTIONS.md
 ```
 
-**For Cursor IDE:**
+**Supported platforms:**
 ```bash
 # Add to .cursorrules in your project root
 echo "Follow the arche framework: https://raw.githubusercontent.com/coreyshort/arche/main/ARCHE_INSTRUCTIONS.md" > .cursorrules
