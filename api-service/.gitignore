@@ -1,0 +1,56 @@
+# Node modules
+node_modules/
+
+# Build outputs
+dist/
+build/
+*.js.map
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Testing
+coverage/
+.nyc_output/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+*.Zone.Identifier
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+prisma/migrations/*_migration/
+
+# Docker
+.dockerignore
+
+# Temporary files
+.tmp/
+temp/
+
+# Python (if using Python backend)
+__pycache__/
+*.py[cod]
+*.so
+.Python
+venv/
+.venv/
+*.egg-info/

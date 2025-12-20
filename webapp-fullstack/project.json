@@ -1,0 +1,29 @@
+{
+  "type": "webapp-fullstack",
+  "name": "Full-Stack Web Application",
+  "description": "Complete web application with frontend, backend API, and shared utilities",
+  "languages": ["javascript", "typescript"],
+  "required_tools": ["node", "npm", "git"],
+  "optional_tools": ["docker", "postgresql"],
+  "node_version": "18+",
+  "directories": [
+    "frontend/directives",
+    "frontend/src/components",
+    "frontend/src/pages",
+    "frontend/src/hooks",
+    "backend/directives",
+    "backend/src/routes",
+    "backend/src/controllers",
+    "backend/src/models",
+    "shared/types",
+    "improvements"
+  ],
+  "features": {
+    "directives": true,
+    "frontend": true,
+    "backend": true,
+    "shared_types": true,
+    "docker": true,
+    "database": true
+  }
+}

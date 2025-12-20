@@ -1,0 +1,28 @@
+{
+  "type": "api-service",
+  "name": "API Service",
+  "description": "Backend API service with authentication, database, and RESTful endpoints",
+  "languages": ["javascript", "typescript", "python"],
+  "required_tools": ["node", "npm", "git"],
+  "optional_tools": ["docker", "postgresql", "redis"],
+  "node_version": "18+",
+  "python_version": "3.10+",
+  "directories": [
+    "src/routes",
+    "src/controllers",
+    "src/models",
+    "src/middleware",
+    "src/services",
+    "src/utils",
+    "directives",
+    "tests",
+    "improvements"
+  ],
+  "features": {
+    "directives": true,
+    "api": true,
+    "database": true,
+    "authentication": true,
+    "docker": true
+  }
+}
