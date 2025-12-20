@@ -1,5 +1,9 @@
 # Arche: Evolutionary Framework for Agentic Systems
 
+![License](https://img.shields.io/github/license/coreyshort/arche)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![Status](https://img.shields.io/badge/status-active-success)
+
 **arche** is named after the ancient Greek concept of *archē*—the first principle, origin, or underlying cause from which things come into being.
 
 In philosophy, the archē is not a thing but a generative source: the set of assumptions, structures, and forces that make creation possible. Arche exists in that same spirit. It is not an agent or a single architecture, but the **evolutionary framework** from which agentic systems emerge—defining how intent becomes action, how reasoning is shaped, and how systems learn to build themselves.
