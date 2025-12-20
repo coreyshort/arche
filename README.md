@@ -26,6 +26,124 @@ Arche provides battle-tested project templates implementing a 3-layer architectu
 
 ---
 
+## Getting Started with Arche
+
+### Quick Start (5 minutes)
+
+**1. Bootstrap a new project:**
+```bash
+# Download the bootstrap script
+curl -O https://raw.githubusercontent.com/coreyshort/arche/main/tools/bootstrap.py
+
+# Run interactive setup
+python bootstrap.py --interactive
+
+# Or directly specify a template
+python bootstrap.py --type automation --target my-project
+```
+
+**2. Initialize the environment:**
+```bash
+cd my-project
+
+# For Python projects
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+
+# For Node projects
+npm install
+```
+
+**3. Configure your AI assistant:**
+
+Point your AI (GitHub Copilot, Claude, ChatGPT) to `AGENTS.md` in your project:
+- This file contains the 3-layer architecture instructions
+- It teaches the AI how to work with directives and execution scripts
+- It establishes the self-annealing workflow
+
+**4. Start building:**
+
+The AI will now:
+- Read directives from `directives/` to understand *what* to do
+- Call execution scripts in `execution/` to *do* the work
+- Update directives as it learns from errors
+- Keep your system reliable and self-improving
+
+### How Arche Works in Practice
+
+**Scenario:** You need to scrape data from a website and save it to a spreadsheet.
+
+**Without Arche (Pure AI):**
+- AI writes scraping code directly in conversation
+- Small errors compound across retries
+- Code lives in chat history, hard to reuse
+- No learning loop—same mistakes happen again
+
+**With Arche (3-Layer Architecture):**
+
+**Step 1: You create a directive** (`directives/scrape_website.md`):
+```markdown
+# Scrape Website Data
+
+**Goal:** Extract product information from example.com
+
+**Input:** List of URLs in `data/urls.txt`
+**Output:** Excel file with product names, prices, descriptions
+
+**Tool:** `execution/scrape_single_site.py`
+
+**Process:**
+1. Read URLs from input file
+2. For each URL, call scraping script
+3. Handle rate limits (wait 2s between requests)
+4. Save results to `local_data/products.xlsx`
+
+**Edge Cases:**
+- Skip URLs that return 404
+- Log errors but continue processing
+- If captcha detected, pause and notify user
+```
+
+**Step 2: AI orchestrates the work:**
+- Reads the directive
+- Calls `execution/scrape_single_site.py` with proper inputs
+- Handles errors (rate limits, 404s, captchas)
+- Updates the directive if it discovers new edge cases
+
+**Step 3: Deterministic code does the work** (`execution/scrape_single_site.py`):
+```python
+def scrape_product(url):
+    # Reliable, tested scraping logic
+    # Consistent error handling
+    # Returns structured data
+```
+
+**Result:** Reliable automation that improves over time.
+
+### Working with Your AI Assistant
+
+Once arche is set up, your AI assistant becomes incredibly effective:
+
+**What you say:** *"We need to add pagination support to the scraping workflow"*
+
+**What the AI does:**
+1. Reads `directives/scrape_website.md` to understand current flow
+2. Updates `execution/scrape_single_site.py` to handle pagination
+3. Tests the changes
+4. Updates the directive to document pagination behavior
+5. Your system is now stronger
+
+**You don't need to:**
+- Explain the whole architecture each time
+- Remind AI about error handling patterns
+- Worry about code living in chat history
+- Repeat context about the project structure
+
+**The directives and execution scripts ARE the context.** The AI reads them, modifies them, and learns from them.
+
+---
+
 ## Available Templates
 
 ### 🤖 Automation
@@ -208,6 +326,32 @@ nano .env  # or your preferred editor
 - Workflow improvements
 
 Your learnings make arche stronger for everyone. This feedback loop is how the system evolves.
+
+---
+
+## How AI Reads Your Project
+
+When you point your AI assistant to arche project files, here's what it learns:
+
+### From `AGENTS.md`:
+- **The 3-layer architecture** - How to separate intent (directives), decisions (AI), and execution (code)
+- **Self-annealing workflow** - Fix → Test → Update → Stronger system
+- **Improvement protocol** - When to create GitHub Issues for template improvements
+- **File organization** - Where deliverables vs intermediates should live
+
+### From `directives/*.md`:
+- **What needs to be done** - Goals, inputs, outputs, tools to use
+- **Edge cases** - Known pitfalls and how to handle them
+- **Process flows** - Step-by-step workflows
+- **Constraints** - API limits, timing requirements, data formats
+
+### From `execution/*.py`:
+- **How to do the work** - Reliable, tested implementations
+- **Error patterns** - How failures are handled
+- **Data structures** - Input/output formats
+- **Integration points** - API calls, database queries, file operations
+
+**The AI doesn't need to memorize everything.** It reads what it needs, when it needs it. The project becomes self-documenting and self-teaching.
 
 ---
 
