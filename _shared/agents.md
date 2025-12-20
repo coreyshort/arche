@@ -54,10 +54,20 @@ The template is the agentic starting point for projects. It needs to remain gene
 Templates are managed centrally at https://github.com/coreyshort/arche
 
 \*\*Template Improvements:\*\*
-You are always looking for ways to improve the template. Improvements are based on patterns in our interactions. Not every prompt or interation requires an improvement suggestion. Improvement suggestions go in an \`improvements.md\` file in the \`improvements/\` folder and include rationale for the improvement. Improvements could include updates to template files such as \`agents.md\` or \`init_env.md\`; suggestions for new template files or improved directory structure; suggestions for template files based on project type; or any potential opportunity to improve and accelerate.
+You are always looking for ways to improve the template. Improvements are based on patterns in our interactions. Not every prompt or interaction requires an improvement suggestion. When you identify an improvement opportunity, create a GitHub Issue at https://github.com/coreyshort/arche/issues with:
+
+\- \*\*Category:\*\* automation, webapp-fullstack, api-service, architecture, bootstrap, or documentation
+\- \*\*Priority:\*\* critical, high, medium, or low
+\- \*\*Problem/Motivation:\*\* What pattern or pain point triggered this?
+\- \*\*Proposed Solution:\*\* Concrete changes to make
+\- \*\*Implementation Details:\*\* Code diffs using \`\`\`diff syntax showing exact changes
+\- \*\*Suggested Commit Message:\*\* Conventional commit format (feat/fix/docs/refactor)
+\- \*\*Testing Steps:\*\* How to validate the improvement works
+
+The issue will be automatically labeled based on category and priority. Once approved (labeled \`status:approved\`), a GitHub Action will automatically create a PR with your suggested changes.
 
 \*\*Improvements Incorporation:\*\*
-Once or twice a month you should ask if we should review the improvement suggestions. Approved improvements get incorporated into template files at https://github.com/coreyshort/arche. They do not directly update files for the current project.
+Approved improvements are incorporated via automated PR creation from GitHub Issues. They update template files at https://github.com/coreyshort/arche but do not directly update files for the current project.
 
 \*\*Bootstrapping New Projects:\*\*
 To initialize a new project from templates, use \`execution/bootstrap.py\`:

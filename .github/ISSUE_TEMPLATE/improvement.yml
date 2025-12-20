@@ -1,0 +1,138 @@
+name: Template Improvement
+description: Suggest an improvement to the Arche template system with implementation details
+title: "[Improvement]: "
+labels: ["improvement", "status:proposed"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Thank you for proposing an improvement!
+        
+        This template helps capture improvements with enough detail for automated implementation.
+        AI agents can create these issues automatically when they discover learnings.
+
+  - type: input
+    id: title
+    attributes:
+      label: Improvement Title
+      description: One-line description of the improvement
+      placeholder: "Add Python version validation to init_env.md"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Which part of the system does this improve?
+      options:
+        - Core Architecture (agents.md)
+        - Environment Setup (init_env.md)
+        - Automation Template
+        - Webapp-Fullstack Template
+        - API-Service Template
+        - Bootstrap Script
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / Motivation
+      description: What issue does this solve? What learning prompted this?
+      placeholder: |
+        During environment setup, we encountered...
+        This caused confusion because...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: High-level description of what should change
+      placeholder: |
+        Add a validation step that checks Python version...
+        Update the directive to include...
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation
+    attributes:
+      label: Implementation (Code Diffs)
+      description: Provide diffs for files that need changes. Use code blocks with diff syntax.
+      placeholder: |
+        #### `template/_shared/agents.md`
+        ```diff
+        - Old text that should be removed
+        + New text that should be added
+        ```
+        
+        #### `template/automation/requirements.txt`
+        ```diff
+        + pandas>=2.1.0
+        ```
+      render: markdown
+
+  - type: textarea
+    id: commit_message
+    attributes:
+      label: Suggested Commit Message
+      description: Follow conventional commits format (feat:, fix:, docs:, etc.)
+      placeholder: |
+        feat: Add Python version validation to init_env.md
+        
+        - Add venv detection step in section 7
+        - Include version checking with clear error messages
+        - Update troubleshooting section with common issues
+        
+        Closes #XX
+      render: markdown
+
+  - type: textarea
+    id: testing
+    attributes:
+      label: Testing Steps
+      description: How to verify this improvement works
+      placeholder: |
+        - [ ] Bootstrap new automation project
+        - [ ] Verify Python version is checked
+        - [ ] Test with Python 3.9 (should warn)
+        - [ ] Test with Python 3.12 (should succeed)
+      render: markdown
+
+  - type: textarea
+    id: related
+    attributes:
+      label: Related Issues
+      description: Link to related issues or discussions
+      placeholder: |
+        - Related to #123
+        - Fixes #456
+        - See discussion #789
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Any other information (error messages, examples, screenshots)
+      placeholder: |
+        Error encountered:
+        ```
+        ImportError: No module named 'pandas'
+        ```

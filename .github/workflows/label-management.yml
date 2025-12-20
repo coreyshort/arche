@@ -1,0 +1,63 @@
+name: Label Management
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  issues: write
+
+jobs:
+  auto-label:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto-label by category
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue = context.payload.issue;
+            const labels = [];
+            
+            // Extract category from issue body
+            const categoryMatch = issue.body.match(/### Category\s+([^\n]+)/);
+            if (categoryMatch) {
+              const category = categoryMatch[1].trim().toLowerCase();
+              
+              if (category.includes('automation')) {
+                labels.push('template:automation');
+              } else if (category.includes('webapp')) {
+                labels.push('template:webapp-fullstack');
+              } else if (category.includes('api')) {
+                labels.push('template:api-service');
+              } else if (category.includes('agents.md') || category.includes('architecture')) {
+                labels.push('core:architecture');
+              } else if (category.includes('init_env.md') || category.includes('environment')) {
+                labels.push('core:init-env');
+              } else if (category.includes('bootstrap')) {
+                labels.push('core:bootstrap');
+              }
+            }
+            
+            // Extract priority from issue body
+            const priorityMatch = issue.body.match(/### Priority\s+([^\n]+)/);
+            if (priorityMatch) {
+              const priority = priorityMatch[1].trim().toLowerCase();
+              if (priority === 'critical') {
+                labels.push('priority:critical');
+              } else if (priority === 'high') {
+                labels.push('priority:high');
+              } else if (priority === 'medium') {
+                labels.push('priority:medium');
+              } else if (priority === 'low') {
+                labels.push('priority:low');
+              }
+            }
+            
+            if (labels.length > 0) {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                labels: labels
+              });
+            }

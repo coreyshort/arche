@@ -1,0 +1,131 @@
+name: Auto-create PR from Approved Improvement
+
+on:
+  issues:
+    types: [labeled]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  create-pr:
+    if: github.event.label.name == 'status:approved'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Extract issue details
+        id: issue
+        run: |
+          ISSUE_NUMBER="${{ github.event.issue.number }}"
+          ISSUE_TITLE="${{ github.event.issue.title }}"
+          BRANCH_NAME="improvement/${ISSUE_NUMBER}-$(echo $ISSUE_TITLE | sed 's/[^a-zA-Z0-9]/-/g' | tr '[:upper:]' '[:lower:]' | cut -c1-50)"
+          
+          echo "number=$ISSUE_NUMBER" >> $GITHUB_OUTPUT
+          echo "title=$ISSUE_TITLE" >> $GITHUB_OUTPUT
+          echo "branch=$BRANCH_NAME" >> $GITHUB_OUTPUT
+
+      - name: Create and checkout branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b ${{ steps.issue.outputs.branch }}
+
+      - name: Parse and apply changes from issue
+        id: apply
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: |
+          # Extract code diffs from issue body
+          # This is a simplified version - you may want to enhance this
+          
+          echo "Parsing issue body for implementation details..."
+          
+          # Look for diff blocks in markdown code fences
+          # Format: #### `file/path` followed by ```diff block
+          
+          # For now, create a marker file to indicate manual review needed
+          echo "Issue #${{ steps.issue.outputs.number }}: ${{ steps.issue.outputs.title }}" > .pending-improvement
+          echo "" >> .pending-improvement
+          echo "This PR was auto-generated from an approved improvement issue." >> .pending-improvement
+          echo "Review the issue for implementation details and apply changes manually." >> .pending-improvement
+          echo "" >> .pending-improvement
+          echo "Issue: https://github.com/${{ github.repository }}/issues/${{ steps.issue.outputs.number }}" >> .pending-improvement
+          
+          git add .pending-improvement
+
+      - name: Commit changes
+        run: |
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            # Extract commit message from issue or use default
+            git commit -m "Implement improvement from #${{ steps.issue.outputs.number }}
+
+${{ steps.issue.outputs.title }}
+
+This PR implements the improvement proposed in issue #${{ steps.issue.outputs.number }}.
+Please review the issue for full implementation details and apply necessary changes.
+
+Related: #${{ steps.issue.outputs.number }}"
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+        id: commit
+
+      - name: Push branch
+        if: steps.commit.outputs.has_changes != 'false'
+        run: |
+          git push origin ${{ steps.issue.outputs.branch }}
+
+      - name: Create Pull Request
+        if: steps.commit.outputs.has_changes != 'false'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ steps.issue.outputs.branch }}
+          title: ${{ steps.issue.outputs.title }}
+          body: |
+            ## Implements Improvement from Issue #${{ steps.issue.outputs.number }}
+            
+            This PR was automatically created from an approved improvement issue.
+            
+            ### Original Issue
+            ${{ github.event.issue.html_url }}
+            
+            ### Implementation Status
+            - [ ] Changes applied as specified in issue
+            - [ ] Tests completed
+            - [ ] Documentation updated
+            
+            ### Next Steps
+            1. Review the implementation details in the linked issue
+            2. Apply the code changes as specified
+            3. Run tests to verify functionality
+            4. Update this PR when ready for merge
+            
+            ---
+            
+            Closes #${{ steps.issue.outputs.number }}
+          labels: |
+            improvement
+            auto-generated
+          draft: true
+
+      - name: Comment on issue
+        if: steps.commit.outputs.has_changes != 'false'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: ${{ steps.issue.outputs.number }},
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '🤖 **Auto-PR Created!**\n\nA draft pull request has been automatically created for this improvement.\n\n➡️ Review and complete the implementation in the PR.\n\nThe PR is in draft mode until you mark it ready for review.'
+            })
