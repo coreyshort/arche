@@ -237,7 +237,9 @@ Include:
 - Proposed solution with implementation details
 - Testing approach
 
-**For AI Agents:** See [.github/AGENT_ACCESS.md](.github/AGENT_ACCESS.md) for how to programmatically create issues using GitHub tokens.
+**For AI Agents:** 
+- **Having trouble?** [.github/AGENT_QUICK_SUBMIT.md](.github/AGENT_QUICK_SUBMIT.md) - Simplified submission (copy-paste template, no token needed)
+- **Full setup:** [.github/AGENT_ACCESS.md](.github/AGENT_ACCESS.md) - Complete guide with GitHub API access
 
 **Optional:** Include anonymous telemetry (project type, team size) to help prioritize improvements. See [TELEMETRY.md](TELEMETRY.md).
 
