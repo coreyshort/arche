@@ -8,7 +8,23 @@ AI agents need to create GitHub Issues to submit improvements, but GitHub's API 
 
 ---
 
-## Solution 1: GitHub Personal Access Token (Recommended)
+## Recommended Approach by Use Case
+
+### For Individual AI Assistants (Claude, ChatGPT, Copilot)
+**Use:** Personal Access Token (PAT) - See Solution 1 below  
+**Why:** Simple setup, tied to your personal account, appropriate for individual use
+
+### For Automated Bots/Services  
+**GitHub Recommends:** GitHub Apps (see Solution 4 below)  
+**Why:** Higher rate limits, granular permissions, not tied to specific user, better for production automation
+
+### For Quick Testing/Manual Submission
+**Use:** Copy-paste template or GitHub CLI (see Solutions 2 & 3)  
+**Why:** No token setup needed, fastest to get started
+
+---
+
+## Solution 1: Personal Access Token (Simplest for Individual Agents)
 
 **Best for:** Most AI agents and automation systems
 
@@ -208,11 +224,118 @@ GitHub Apps provide fine-grained permissions and are ideal for organizational us
        return response.json()["token"]
    ```
 
-**Note:** This approach requires more setup but is recommended for production systems processing high volumes of issues.
+---
+
+## Solution 4: GitHub App (Recommended by GitHub for Automation)
+
+**Best for:** Production automation, high-volume processing, organizational bots
+
+**Why GitHub recommends this:**
+- **Higher rate limits:** 5,000 requests/hour per installation (vs 5,000/hour for PAT)
+- **Granular permissions:** Only request what you need (e.g., just `issues: write`)
+- **Not tied to user:** Won't break if person leaves organization
+- **Better audit trail:** Shows as bot activity, not user activity
+- **More secure:** Installation tokens expire, scoped per-repository
+
+**When to use:**
+- Building a service that creates many issues
+- Organization-wide automation
+- Multiple repositories need access
+- Compliance requirements (audit logs)
+
+**Setup Steps:**
+
+1. **Register GitHub App:**
+   - Go to: https://github.com/settings/apps/new
+   - App name: `arche-issue-creator`
+   - Homepage URL: `https://github.com/coreyshort/arche`
+   - Permissions: 
+     - Repository permissions → Issues: Read & Write
+   - Subscribe to events: None needed for issue creation
+   - Where can this app be installed? → Only on this account
+
+2. **Install on your account/org:**
+   - After creation, click "Install App"
+   - Select repositories (or all repositories)
+
+3. **Generate private key:**
+   - In app settings, scroll to "Private keys"
+   - Click "Generate a private key"
+   - Save the `.pem` file securely
+
+4. **Use in code:**
+   ```python
+   import jwt
+   import time
+   import requests
+   
+   def get_installation_token(app_id: str, private_key_path: str, installation_id: str):
+       """Get installation access token for GitHub App."""
+       # Load private key
+       with open(private_key_path, 'r') as key_file:
+           private_key = key_file.read()
+       
+       # Generate JWT
+       payload = {
+           "iat": int(time.time()),
+           "exp": int(time.time()) + 600,  # 10 minutes
+           "iss": app_id
+       }
+       
+       token = jwt.encode(payload, private_key, algorithm="RS256")
+       
+       # Exchange for installation token
+       headers = {
+           "Authorization": f"Bearer {token}",
+           "Accept": "application/vnd.github.v3+json"
+       }
+       
+       url = f"https://api.github.com/app/installations/{installation_id}/access_tokens"
+       response = requests.post(url, headers=headers)
+       response.raise_for_status()
+       
+       return response.json()["token"]
+   
+   # Get installation token (valid for 1 hour)
+   token = get_installation_token(
+       app_id="123456",
+       private_key_path="path/to/private-key.pem",
+       installation_id="78901234"
+   )
+   
+   # Create issue using installation token
+   headers = {
+       "Authorization": f"Bearer {token}",
+       "Accept": "application/vnd.github.v3+json"
+   }
+   
+   response = requests.post(
+       "https://api.github.com/repos/coreyshort/arche/issues",
+       headers=headers,
+       json={
+           "title": "[Improvement]: Title",
+           "body": "Issue body",
+           "labels": ["improvement", "status:proposed"]
+       }
+   )
+   ```
+
+**Note:** Requires PyJWT library: `pip install PyJWT cryptography`
+
+**Finding your installation ID:**
+```bash
+# After installing the app, get installation ID
+curl -H "Authorization: Bearer YOUR_JWT_TOKEN" \
+  https://api.github.com/app/installations
+```
+
+**Resources:**
+- [GitHub Apps documentation](https://docs.github.com/en/apps/creating-github-apps)
+- [Best practices for GitHub Apps](https://docs.github.com/en/apps/creating-github-apps/about-creating-github-apps/best-practices-for-creating-a-github-app)
 
 ---
 
-## Solution 4: OAuth App (For User-Facing Tools)
+## Solution 5: OAuth App (For User-Facing Tools)
 
 **Best for:** Web applications where users authorize the agent
 
