@@ -347,14 +347,35 @@ If you're building a tool that helps users create issues, use OAuth:
 
 ---
 
-## Recommended Approach by Use Case
+## Comparison & Best Practices
 
-| Use Case | Recommended Solution | Why |
-|----------|---------------------|-----|
-| Individual agent/developer | GitHub CLI | Easiest setup, secure |
-| Automated CI/CD | Personal Access Token | Simple integration |
-| Multiple agents | Personal Access Token | Centralized management |
-| Enterprise/Organization | GitHub App | Fine-grained permissions |
+| Approach | Setup Complexity | Best For | Rate Limit | Security |
+|----------|-----------------|----------|------------|----------|
+| **GitHub CLI** | ⚡ Easy | Local development, interactive | 5,000/hr | ✅ High (OAuth) |
+| **Personal Access Token** | ⚡⚡ Medium | Individual agents, simple automation | 5,000/hr | ⚠️ Medium (manual rotation) |
+| **GitHub App** | ⚡⚡⚡ Complex | Production bots, organizations | 5,000/hr per install | ✅ High (auto-expiry) |
+| **OAuth App** | ⚡⚡⚡ Complex | User-facing tools | 5,000/hr per user | ✅ High (user-scoped) |
+
+**GitHub's Official Recommendation:**
+- **For automation/bots:** Use GitHub Apps (Solution 4)
+- **For individual use:** Personal Access Tokens are acceptable (Solution 1)
+- **For user-facing tools:** Use OAuth Apps (Solution 5)
+
+**Best Practices (from GitHub):**
+1. **Make authenticated requests** - Higher rate limits than anonymous
+2. **Pause between mutative requests** - Wait 1+ second between POST requests
+3. **Handle rate limits properly** - Check `x-ratelimit-remaining` header
+4. **Use minimal scopes** - Only request permissions you need
+5. **Rotate tokens regularly** - Especially for PATs
+
+**For arche specifically:**
+- **Most AI assistants:** Use PAT (Solution 1) - simple, works well
+- **Production automation:** Consider GitHub App (Solution 4) for scalability
+- **Quick testing:** Use copy-paste template or GitHub CLI (Solutions 2 & 3)
+
+---
+
+## Troubleshooting
 | User-facing tool | OAuth App | Users authorize agent |
 
 ---

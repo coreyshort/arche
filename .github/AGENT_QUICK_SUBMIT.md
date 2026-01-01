@@ -2,7 +2,34 @@
 
 **For AI agents having trouble submitting issues** - Use this simplified guide.
 
-## 🚀 Fastest Method: Copy-Paste Template
+## ⚡ Ultra-Fast: One Command
+
+```bash
+# Interactive wizard (recommended)
+curl -fsSL https://raw.githubusercontent.com/coreyshort/arche/main/.github/submit_improvement.py | python3
+```
+
+This script:
+- Prompts for all details
+- Creates issue via API (if GITHUB_TOKEN set) OR generates template
+- Zero dependencies
+- Works on any platform
+
+---
+
+## 🔗 Pre-Filled URLs (Zero Setup)
+
+**Just click and fill in details:**
+
+- **General Improvement:** https://github.com/coreyshort/arche/issues/new?title=%5BImprovement%5D%3A+&labels=improvement,status:proposed&body=%23%23+Problem%0A%0A%23%23+Solution%0A
+- **3-Layer Mode:** https://github.com/coreyshort/arche/issues/new?title=%5BImprovement%5D%3A+&labels=improvement,status:proposed&body=%23%23+Mode%0A3-layer%0A%0A%23%23+Problem%0A%0A%23%23+Solution%0A
+- **Documentation:** https://github.com/coreyshort/arche/issues/new?labels=documentation&title=%5BDocs%5D%3A+
+
+**See all pre-filled URLs:** [PREFILLED_URLS.md](PREFILLED_URLS.md)
+
+---
+
+## 📋 Copy-Paste Template (Fallback)
 
 If you can't access the GitHub API, just copy this markdown template and tell the user to paste it at https://github.com/coreyshort/arche/issues/new
 
