@@ -121,11 +121,39 @@
 
 ---
 
+#### 5. Google Gemini (Multimodal, Fast)
+
+**File:** [EXAMPLE_BP0004_TO_GEMINI.md](EXAMPLE_BP0004_TO_GEMINI.md)
+
+**What:** Full translation of BP-0004 (Content Moderation) to Google Gemini with Agents API
+
+**Best for:**
+- Multimodal content moderation (text, images, video, audio)
+- Fast inference and low latency
+- Google Cloud infrastructure
+- Large-scale deployments
+- Real-time moderation pipelines
+
+**Covers:**
+- Multimodal input handling
+- Cloud Storage integration for images/video
+- Gemini tool definitions with structured output
+- Firestore for feedback storage
+- BigQuery for analytics and learning
+- Cloud Tasks scheduling
+- Pub/Sub notifications
+- FastAPI deployment
+
+**Time to read:** 60-75 minutes  
+**Complexity:** Advanced  
+**Deployment components:** GCP (Cloud Storage, Firestore, BigQuery, Cloud Tasks, Pub/Sub) + FastAPI
+
+---
+
 ### 🚀 Planned Examples
 
 | Vendor | Status | Focus |
 |--------|--------|-------|
-| **Google Gemini** | Planned | Multimodal agents, fast inference |
 | **AutoGen** | Planned | Distributed coordination, resilience |
 
 ---
@@ -262,6 +290,6 @@ To add a new vendor example:
 
 ---
 
-**Status:** 4 of 6 examples complete  
+**Status:** 5 of 6 examples complete  
 **Last Updated:** January 5, 2026  
 **Target Completion:** Q1 2026
