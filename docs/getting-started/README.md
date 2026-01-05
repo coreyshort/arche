@@ -8,6 +8,7 @@
 
 | Your Role | Start Here |
 |-----------|-----------|  
+| **Not sure which path?** | CHOOSE_YOUR_PATH.md |
 | **New to arche** | QUICK_REFERENCE.md |
 | **Understanding architecture** | ARCHE_INTEGRATION_GUIDE.md |
 | **Translating to vendors** | ../vendor-translation/README.md |

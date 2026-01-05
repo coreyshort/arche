@@ -1,6 +1,21 @@
-# Arche Management Tools
+# Arche Tools
 
-Utilities for managing arche projects and framework updates.
+**Implementation tools for managing and validating arche projects.**
+
+---
+
+## 📁 Location Notes
+
+This folder (`arche-tools/`) contains **actual tool implementations**:
+- bootstrap.py — Project initialization utility
+- arche_compat_check.py — Mode compatibility validator
+- update_arche.py — Framework update manager
+
+**For documentation about these tools**, see: `../tools/README.md`
+
+When referencing these tools from docs, use: `../../arche-tools/[tool-name]`
+
+---
 
 ## Available Tools
 

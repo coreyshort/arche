@@ -1,6 +1,17 @@
-# Tools: Implementation Utilities
+# Tools & Implementation Utilities
 
-**CLIs and scripts for working with arche MAOs.**
+**CLIs and scripts for working with arche MAOs and framework.**
+
+---
+
+## 📁 Tool Locations
+
+This directory (`tools/`) documents the **planning and specifications** for tools and utilities. Actual implementations are in:
+
+- **[../arche-tools/](../arche-tools/)** — Implemented tools (bootstrap.py, arche_compat_check.py, update_arche.py)
+- **[../modes/foundry/](../modes/foundry/)** — Foundry framework and code generation
+
+When using tools from docs or other nested folders, reference `../../arche-tools/[tool-name]`
 
 ---
 
@@ -8,6 +19,8 @@
 
 ### arche_compat_check.py
 **Validate mode combinations and MAO architecture**
+
+**Location:** `../arche-tools/arche_compat_check.py`
 
 **Purpose:** Ensure your MAO uses compatible modes
 
@@ -29,7 +42,41 @@ python arche_compat_check.py --modes 3-layer event-driven
 - ✅ Suggests alternatives
 - ✅ Explains recommendations
 
-**Reference:** See ../frameworks/MODE_COMPATIBILITY.md for pairing patterns
+**Reference:** See ../docs/frameworks/MODE_COMPATIBILITY.md for pairing patterns
+
+---
+
+### bootstrap.py
+**Initialize new projects from arche modes and forms**
+
+**Location:** `../arche-tools/bootstrap.py`
+
+**Purpose:** Quickly scaffold a new arche project with your chosen mode and form
+
+**Usage:**
+```bash
+# Interactive mode (recommended)
+python bootstrap.py --interactive
+
+# Direct initialization
+python bootstrap.py --type automation --name "My Project"
+
+# List available templates
+python bootstrap.py --list
+
+# Pin to specific version
+python bootstrap.py --type automation --branch v1.0.0
+```
+
+**Features:**
+- ✅ No dependencies (pure Python stdlib)
+- ✅ No authentication required
+- ✅ Smart fetching (only downloads needed files)
+- ✅ Interactive guided setup
+- ✅ Version pinning support
+- ✅ Template validation
+
+**Note:** Uses GitHub's public API (60 requests/hour limit per IP). Set `GITHUB_TOKEN` env var for higher limits.
 
 ---
 

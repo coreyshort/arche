@@ -9,6 +9,7 @@
 | Your Goal | Start Here | Time |
 |-----------|-----------|------|
 | **I'm an AI agent** | [../AI_QUICKSTART.md](../AI_QUICKSTART.md) | 2 min |
+| **Not sure where to start?** | [getting-started/CHOOSE_YOUR_PATH.md](getting-started/CHOOSE_YOUR_PATH.md) | 5 min |
 | **Brand new to arche** | [getting-started/QUICK_REFERENCE.md](getting-started/QUICK_REFERENCE.md) | 5 min |
 | **Understand architecture** | [getting-started/ARCHE_INTEGRATION_GUIDE.md](getting-started/ARCHE_INTEGRATION_GUIDE.md) | 1 hour |
 | **Choose a mode** | [frameworks/MODE_COMPATIBILITY.md](frameworks/MODE_COMPATIBILITY.md) | 15 min |
@@ -24,9 +25,11 @@
 ### [getting-started/](getting-started/)
 **Start here** — Onboarding and framework overview
 
+- **CHOOSE_YOUR_PATH.md** — Decide which approach fits your needs (5 min)
 - **QUICK_REFERENCE.md** — One-page overview of everything (5 min)
 - **ARCHE_INTEGRATION_GUIDE.md** — Complete architecture guide (1 hour)
 - **COMPLETION_SUMMARY.md** — What was built in arche 2.0 (10 min)
+- **MARKDOWN_LINK_VALIDATION.md** — Ensure documentation links stay valid (reference)
 
 **→ For first-time users, begin here**
 
