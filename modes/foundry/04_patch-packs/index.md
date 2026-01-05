@@ -7,6 +7,9 @@ Patch packs are idempotent, file-level upgrades applied to existing MAOs.
 - `FND-0002-add-eval-suite-min-3.md`
 - `FND-0003-add-scaffold-spec.md`
 
+## Integration patches
+- `FND-0004-add-mode-integration.md` — Add arche mode recommendations to agent manuals
+
 ## Apply process
 1) Pre-checks
 2) Apply changes

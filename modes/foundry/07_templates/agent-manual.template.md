@@ -5,6 +5,16 @@
 ## Mission
 -
 
+## Recommended Implementation Mode
+
+**Mode**: [3-Layer / Agentic-Swarm / Event-Driven / RL-Loop]
+
+**Rationale**: [Why this mode fits this agent's objective]
+
+**Form**: [Link to arche form or mode documentation]
+
+**See also**: `../../../MODE_INTEGRATION_GUIDE.md` for decision tree
+
 ## Reads
 - 
 

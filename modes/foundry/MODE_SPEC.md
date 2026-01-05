@@ -4,11 +4,12 @@
 Foundry creates and evolves **multi-agent organizations (MAOs)** for a given objective.
 
 ## Non-negotiables (every generated MAO)
-1) Learning loop: `09_learning/` with feedback log, issue backlog, CRs, rubrics, eval scenarios, scorecards.
-2) Meta contract: `10_meta/` with `FOUNDRY_CONTRACT.md`, `feedback-export.md`, `upgrade-log.md`.
-3) Ownership + scaffold spec: `00_governance/file-ownership.md` and `00_governance/scaffold-spec.md`.
-4) Every primary artifact type has a rubric.
-5) Eval suite minimum: 3 scenarios representing top intersections of the selected dimensions.
+1) Mode integration: `00_governance/mode-selection-log.md` documents recommended arche mode for each agent.
+2) Learning loop: `09_learning/` with feedback log, issue backlog, CRs, rubrics, eval scenarios, scorecards.
+3) Meta contract: `10_meta/` with `FOUNDRY_CONTRACT.md`, `feedback-export.md`, `upgrade-log.md`.
+4) Ownership + scaffold spec: `00_governance/file-ownership.md` and `00_governance/scaffold-spec.md`.
+5) Every primary artifact type has a rubric.
+6) Eval suite minimum: 3 scenarios representing top intersections of the selected dimensions.
 
 ## Inputs (structured but flexible)
 A) Objective & outcomes
