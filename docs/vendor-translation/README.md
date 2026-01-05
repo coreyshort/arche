@@ -13,7 +13,7 @@
 | **Choose a vendor** | [VENDOR_SELECTION_DECISION_TREE.md](VENDOR_SELECTION_DECISION_TREE.md) |
 | **Understand the architecture** | [VENDOR_TRANSLATION_SPECIFICATION.md](VENDOR_TRANSLATION_SPECIFICATION.md) |
 | **Translate my MAO** | [VENDOR_INTEGRATION_GUIDE.md](VENDOR_INTEGRATION_GUIDE.md) |
-| **See a worked example** | [examples/EXAMPLE_BP0004_TO_CLAUDE.md](examples/EXAMPLE_BP0004_TO_CLAUDE.md) |
+| **See worked examples** | [examples/](examples/) |
 | **Quick reference** | [VENDOR_TRANSLATION_QUICK_REFERENCE.md](VENDOR_TRANSLATION_QUICK_REFERENCE.md) |
 | **Understand the plan** | [VENDOR_TRANSLATION_IMPLEMENTATION_SUMMARY.md](VENDOR_TRANSLATION_IMPLEMENTATION_SUMMARY.md) |
 | **Check completion status** | [VENDOR_TRANSLATION_COMPLETION_CHECKLIST.md](VENDOR_TRANSLATION_COMPLETION_CHECKLIST.md) |
@@ -67,8 +67,9 @@ One-page reference card
 - Common mistakes
 
 ### examples/
-Concrete worked examples
-- EXAMPLE_BP0004_TO_CLAUDE.md - Full walkthrough translating content moderation MAO to Claude Projects
+Concrete worked examples showing complete MAO-to-vendor translation process
+- **EXAMPLE_BP0004_TO_CLAUDE.md** - BP-0004 (Content Moderation) → Claude Projects (API-first, fastest iteration)
+- **COPILOT_STUDIO_INTEGRATION.md** - BP-0004 (Content Moderation) → Copilot Studio (Enterprise, Teams-integrated)
 
 ### VENDOR_TRANSLATION_IMPLEMENTATION_SUMMARY.md
 Executive overview and roadmap
@@ -99,8 +100,9 @@ Executive overview and roadmap
 
 ✅ Specification complete  
 ✅ Integration guide complete  
-✅ Example complete  
+✅ Examples: 2 of 6 complete (Claude, Copilot Studio)
 🚀 Ready for Phase 1 implementation (foundry-translate CLI)
+⏳ Pending: Gemini, OpenAI Swarm, AutoGen, LangGraph examples
 
 ---
 
