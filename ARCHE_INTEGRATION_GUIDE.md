@@ -232,12 +232,40 @@ User wants to build a Multi-Agent Organization
 | **Pick agent patterns** | `AGENT_ARCHETYPES.md` | Reusable agent templates |
 | **Use existing blueprint** | `blueprint-registry.md`, `BP-XXXX.md` | Domain-specific scaffolds |
 | **Design new MAO** | `FOUNDRY_QUICK_START.md`, learning loop templates | Getting started |
+| **Set up feedback loops** | `FEEDBACK_SPECIFICATION.md` | What to collect and how |
 | **Evolve agents** | `MODE_MIGRATION_GUIDE.md` | Migrating between modes |
 | **Track updates** | `UPGRADE_ADVISORIES.md` | New features & changes |
 | **Contribute** | `COMMUNITY_CONTRIBUTION_PATHWAY.md` | Extending arche |
 | **Validate combination** | `arche_compat_check.py` | Check before building |
+| **Understand framework improvements** | `FRAMEWORK_LEARNING_LOOP.md` | How arche improves |
 
 ---
+
+## Feedback Loops: Making Everything Improve
+
+arche is designed to improve continuously based on feedback from teams like yours. Here's how the system works:
+
+### Your MAO's Learning Loop
+1. **Collect:** Your agents log decisions, outcomes, errors → `09_learning/feedback-log.md`
+2. **Analyze:** Weekly team review identifies patterns and improvement opportunities
+3. **Improve:** Create change requests, test with eval scenarios, deploy improvements
+4. **Share:** Monthly, submit feedback issues with `[FEEDBACK]` tag to help arche improve
+
+See `FEEDBACK_SPECIFICATION.md` for detailed templates and what metrics matter for your agent types.
+
+### arche's Learning Loop (Quarterly)
+1. **Collect:** arche core team gathers feedback from all MAO teams and contributions
+2. **Analyze:** Quarterly review identifies patterns (what's working, what's broken, what's missing)
+3. **Improve:** Core team prioritizes improvements and implements changes
+4. **Share:** Release upgrades advisories, updated blueprints, new tools
+5. **Validate:** Teams adopt improvements, report back on effectiveness
+
+See `FRAMEWORK_LEARNING_LOOP.md` for how arche's quarterly cycle works and how your feedback shapes improvements.
+
+**The key:** Both your MAO and the framework improve together. Your feedback makes arche better for everyone. arche improvements make your MAO better through upgrades and new tools.
+
+---
+
 
 ## Best Practices
 
@@ -250,25 +278,39 @@ Before committing to mode combination, validate with `arche_compat_check.py`.
 ### 3. Plan Learning Loops
 Every MAO needs feedback mechanism. Design learning loop upfront (don't add later).
 
-### 4. Document Mode Choices
+**How:** Follow FEEDBACK_SPECIFICATION.md for what to collect, create `09_learning/feedback-log.md` in your MAO, and set up weekly reviews. See FEEDBACK_SPECIFICATION.md for templates and metrics by agent type.
+
+### 4. Track Feedback & Report Learnings
+Set up feedback collection in your MAO, analyze weekly, and share monthly learnings with arche community.
+
+**How:** 
+1. Implement decision feedback (every agent decision logged)
+2. Implement outcome feedback (daily metrics)
+3. Implement system feedback (errors/slowdowns)
+4. Weekly: Review patterns in feedback-log
+5. Monthly: Create GitHub issue with `[FEEDBACK]` tag to share learnings
+
+See FEEDBACK_SPECIFICATION.md for detailed format and examples. Your feedback helps arche improve.
+
+### 5. Document Mode Choices
 Create `mode-selection-log.md` in your MAO explaining:
 - Why each agent uses its assigned mode
 - How modes interact
 - When/how to revisit these decisions
 
-### 5. Migrate Gradually
+### 6. Migrate Gradually
 When changing modes (3-Layer → RL-Loop), follow phased approach from `MODE_MIGRATION_GUIDE.md`. Don't switch all at once.
 
-### 6. Monitor Compatibility
+### 7. Monitor Compatibility
 As MAO grows, periodically re-run compatibility checker. New agents may create unexpected interactions.
 
-### 7. Track Upgrades
+### 8. Track Upgrades
 Create `upgrades-log.md` in MAO to document:
 - Which advisories you've adopted
 - When you adopted them
 - Any custom modifications
 
-### 8. Share Learnings
+### 9. Share Learnings
 If you solve a problem or find a useful pattern, propose it as community contribution. This makes arche better for everyone.
 
 ---
