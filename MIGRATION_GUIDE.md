@@ -164,7 +164,7 @@ But you now have access to:
 **A:** No migration period needed since there are no breaking changes. Both versions coexist peacefully.
 
 ### Q: What's the timeline for v2.1?
-**A:** Q1 2026 with blueprint completions and additional vendor examples.
+**A:** Q1 2026 with blueprint completions and final AutoGen vendor example (5 of 6 vendor examples completed in v2.0.0).
 
 ---
 

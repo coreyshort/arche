@@ -46,9 +46,9 @@
 
 3. **Translate to your vendor** (3-5 days)
    - Read: [../vendor-translation/VENDOR_SELECTION_DECISION_TREE.md](../vendor-translation/VENDOR_SELECTION_DECISION_TREE.md)
-   - Pick your vendor (Claude, Copilot, Gemini, etc.)
+   - Pick your vendor (Claude, Copilot Studio, Gemini, LangGraph, OpenAI Swarm)
    - Follow: [../vendor-translation/VENDOR_INTEGRATION_GUIDE.md](../vendor-translation/VENDOR_INTEGRATION_GUIDE.md)
-   - Use worked example: [../vendor-translation/examples/EXAMPLE_BP0004_TO_CLAUDE.md](../vendor-translation/examples/EXAMPLE_BP0004_TO_CLAUDE.md)
+   - Browse examples: [../vendor-translation/examples/](../vendor-translation/examples/README.md) — 5 complete, 1 planned
 
 4. **Setup learning loops** (2-3 days)
    - Read: [../learning/FEEDBACK_SPECIFICATION.md](../learning/FEEDBACK_SPECIFICATION.md)

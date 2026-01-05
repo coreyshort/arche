@@ -66,8 +66,7 @@
 - **VENDOR_SELECTION_DECISION_TREE.md** — Choose the right vendor
 - **VENDOR_TRANSLATION_SPECIFICATION.md** — How translation works
 - **VENDOR_INTEGRATION_GUIDE.md** — Step-by-step translation
-- **EXAMPLE_BP0004_TO_CLAUDE.md** — Worked example (BP-0004 → Claude)
-- **examples/** — Additional vendor examples
+- **examples/** — 5 worked examples (Claude, Copilot Studio, LangGraph, OpenAI Swarm, Gemini)
 
 **→ For deployment and vendor integration**
 

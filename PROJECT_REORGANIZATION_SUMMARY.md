@@ -81,8 +81,12 @@ arche/ (organized by topic)
 - VENDOR_TRANSLATION_QUICK_REFERENCE.md - 1-page ref
 - VENDOR_TRANSLATION_IMPLEMENTATION_SUMMARY.md - Roadmap
 - VENDOR_TRANSLATION_COMPLETION_CHECKLIST.md - Status
-- examples/ - Worked examples
+- examples/ - Worked examples (5 of 6 complete)
   - EXAMPLE_BP0004_TO_CLAUDE.md - BP-0004 → Claude
+  - EXAMPLE_BP0004_TO_COPILOT_STUDIO.md - BP-0004 → Copilot Studio
+  - EXAMPLE_BP0004_TO_LANGGRAPH.md - BP-0004 → LangGraph
+  - EXAMPLE_BP0004_TO_SWARM.md - BP-0004 → OpenAI Swarm
+  - EXAMPLE_BP0004_TO_GEMINI.md - BP-0004 → Google Gemini
 - README.md - Navigation for this section
 
 ### blueprints/

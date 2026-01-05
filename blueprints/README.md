@@ -37,7 +37,7 @@
 **Architecture:** Agentic-Swarm + RL-Loop  
 **Learning:** Reduces false positives/negatives weekly  
 **Use Case:** Social platforms, content sites, moderation teams  
-**Example Translation:** See ../vendor-translation/examples/EXAMPLE_BP0004_TO_CLAUDE.md
+**Example Translations:** See [../vendor-translation/examples/](../vendor-translation/examples/) — 5 platforms (Claude, Copilot Studio, LangGraph, OpenAI Swarm, Gemini)
 
 → **File:** BP-0004-content-moderation.md
 

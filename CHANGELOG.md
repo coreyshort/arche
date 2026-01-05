@@ -36,7 +36,7 @@ All notable changes to arche will be documented in this file.
 ### ⚠️ Known Status
 
 - **Blueprint Examples:** BP-0003 (Incident Response), BP-0004 (Content Moderation), and BP-0005 (Data Operations) are in development with "Coming Soon" status. Structure and rationale documented, full implementation arriving Q1 2026.
-- **Vendor Examples:** Worked example available for Claude (see EXAMPLE_BP0004_TO_CLAUDE.md). Additional vendor translation examples in development.
+- **Vendor Examples:** 5 of 6 worked examples complete (Claude, Copilot Studio, LangGraph, OpenAI Swarm, Gemini). Final AutoGen example in development.
 
 ### 📖 Documentation Statistics
 
