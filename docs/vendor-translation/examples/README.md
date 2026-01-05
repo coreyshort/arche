@@ -63,6 +63,35 @@
 
 ---
 
+#### 3. LangGraph (Python-First, Production-Grade)
+
+**File:** [EXAMPLE_BP0004_TO_LANGGRAPH.md](EXAMPLE_BP0004_TO_LANGGRAPH.md)
+
+**What:** Full translation of BP-0004 (Content Moderation) to LangGraph
+
+**Best for:**
+- Custom, complex workflows
+- Research and experimentation
+- Production systems needing full control
+- Python-native development
+- Iterative refinement
+
+**Covers:**
+- State modeling (TypedDict design)
+- Node implementation patterns
+- Graph construction and routing
+- Human-in-the-loop interrupts
+- Checkpointing and persistence
+- Learning loops with scheduled jobs
+- Testing strategy (unit + integration)
+- Deployment options (Docker, Kubernetes, FastAPI)
+
+**Time to read:** 60-75 minutes  
+**Complexity:** Advanced  
+**Deployment components:** Python app + LangGraph runtime + APScheduler
+
+---
+
 ### 🚀 Planned Examples
 
 | Vendor | Status | Focus |
@@ -70,7 +99,6 @@
 | **Google Gemini** | Planned | Multimodal agents, fast inference |
 | **OpenAI Swarm** | Planned | Deterministic routing, simpler flows |
 | **AutoGen** | Planned | Distributed coordination, resilience |
-| **LangGraph** | Planned | Custom workflows, full control |
 
 ---
 
@@ -206,6 +234,6 @@ To add a new vendor example:
 
 ---
 
-**Status:** 2 of 6 examples complete  
+**Status:** 3 of 6 examples complete  
 **Last Updated:** January 5, 2026  
 **Target Completion:** Q1 2026
