@@ -71,6 +71,56 @@ Arche supports different **modes**—fundamental architectural approaches for bu
 
 ---
 
+## 📚 Documentation Structure
+
+All arche documentation is organized by role and use case:
+
+```
+docs/
+├── getting-started/          ← Start here (all roles)
+│   ├── QUICK_REFERENCE.md
+│   ├── ARCHE_INTEGRATION_GUIDE.md
+│   └── COMPLETION_SUMMARY.md
+│
+├── frameworks/               ← Core architecture
+│   ├── MODE_COMPATIBILITY.md
+│   ├── AGENT_ARCHETYPES.md
+│   ├── MODE_MIGRATION_GUIDE.md
+│   └── COMMUNITY_CONTRIBUTION_PATHWAY.md
+│
+├── learning/                 ← Feedback & improvement
+│   ├── FEEDBACK_SPECIFICATION.md
+│   └── FRAMEWORK_LEARNING_LOOP.md
+│
+└── vendor-translation/       ← Deploy to any platform
+    ├── VENDOR_TRANSLATION_SPECIFICATION.md
+    ├── VENDOR_INTEGRATION_GUIDE.md
+    ├── VENDOR_SELECTION_DECISION_TREE.md
+    └── examples/
+        └── EXAMPLE_BP0004_TO_CLAUDE.md
+
+blueprints/                   ← Production-ready MAOs
+├── BP-0003-incident-response.md
+├── BP-0004-content-moderation.md
+└── BP-0005-data-operations.md
+
+tools/                        ← Implementation utilities
+├── arche_compat_check.py
+└── (foundry-translate coming Phase 1)
+```
+
+### 🎯 Where to Start
+
+| You are... | Go to... | Time |
+|-----------|----------|------|
+| **Brand new to arche** | [docs/getting-started/QUICK_REFERENCE.md](docs/getting-started/QUICK_REFERENCE.md) | 5 min |
+| **Need to choose a mode** | [docs/frameworks/MODE_COMPATIBILITY.md](docs/frameworks/MODE_COMPATIBILITY.md) | 15 min |
+| **Want to build a MAO** | [blueprints/](blueprints/) | 30 min |
+| **Need to deploy to vendor** | [docs/vendor-translation/README.md](docs/vendor-translation/README.md) | 20 min |
+| **Want full architecture** | [docs/getting-started/ARCHE_INTEGRATION_GUIDE.md](docs/getting-started/ARCHE_INTEGRATION_GUIDE.md) | 1 hour |
+
+---
+
 ## Architecture & Selective Sync
 
 **Arche grows, your project doesn't.**
