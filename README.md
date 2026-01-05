@@ -14,9 +14,9 @@ In philosophy, the archē is not a thing but a generative source: the set of ass
 
 **Arche doesn't prescribe one approach.** It provides a foundation for multiple modes of agentic development, each suited to different paradigms. As the world of agents evolves, new modes emerge independently based on market and industry evolution.
 
-**Modes have maturity levels** that evolve as they gain adoption and stability. See [MODE_MATURITY.md](MODE_MATURITY.md) for the maturity model.
+**Modes have maturity levels** that evolve as they gain adoption and stability. See [modes/MODE_MATURITY.md](modes/MODE_MATURITY.md) for the maturity model.
 
-**Choosing a mode?** See [MODE_SELECTION.md](MODE_SELECTION.md) for detailed guidance on which mode fits your project.
+**Choosing a mode?** See [modes/MODE_SELECTION.md](modes/MODE_SELECTION.md) for detailed guidance on which mode fits your project.
 
 ---
 
@@ -128,7 +128,7 @@ tools/                        ← Implementation utilities
 As arche evolves with more modes, forms, and patterns, individual projects stay lightweight through **selective sync**:
 
 - **What's copied:** Only the mode and form you select
-- **What's referenced:** Cross-mode documentation (MODE_SELECTION.md, TELEMETRY.md) via URLs
+- **What's referenced:** Cross-mode documentation (modes/MODE_SELECTION.md, TELEMETRY.md) via URLs
 - **What's excluded:** All other modes, forms, and templates
 
 **Example:** A 3-layer/automation project gets:
@@ -213,7 +213,7 @@ Your AI will read the instructions, select the appropriate form, and bootstrap t
 For more complex projects, let AI analyze and choose:
 ```
 Initialize an arche project for: [describe your project]
-Use autonomous mode selection: https://raw.githubusercontent.com/coreyshort/arche/main/AUTONOMOUS_MODE_SELECTION.md
+Use autonomous mode selection: https://raw.githubusercontent.com/coreyshort/arche/main/modes/AUTONOMOUS_MODE_SELECTION.md
 ```
 
 The AI will:

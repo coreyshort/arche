@@ -10,9 +10,9 @@
 |-----------|-----------|------|
 | **I'm an AI agent** | [../AI_QUICKSTART.md](../AI_QUICKSTART.md) | 2 min |
 | **Not sure where to start?** | [getting-started/CHOOSE_YOUR_PATH.md](getting-started/CHOOSE_YOUR_PATH.md) | 5 min |
+| **Choose a mode** | [../modes/MODE_SELECTION.md](../modes/MODE_SELECTION.md) | 15 min |
 | **Brand new to arche** | [getting-started/QUICK_REFERENCE.md](getting-started/QUICK_REFERENCE.md) | 5 min |
 | **Understand architecture** | [getting-started/ARCHE_INTEGRATION_GUIDE.md](getting-started/ARCHE_INTEGRATION_GUIDE.md) | 1 hour |
-| **Choose a mode** | [frameworks/MODE_COMPATIBILITY.md](frameworks/MODE_COMPATIBILITY.md) | 15 min |
 | **Choose agent patterns** | [frameworks/AGENT_ARCHETYPES.md](frameworks/AGENT_ARCHETYPES.md) | 20 min |
 | **Deploy to vendors** | [vendor-translation/README.md](vendor-translation/README.md) | 20 min |
 | **Setup learning loops** | [learning/README.md](learning/README.md) | 30 min |
@@ -122,9 +122,9 @@
 
 ## 🔗 Related Resources
 
+- **[../modes/](../modes/)** — Architectural paradigms and mode selection (MODE_SELECTION.md, MODE_MATURITY.md)
 - **[../blueprints/](../blueprints/)** — Production-ready MAO examples (BP-0003, BP-0004, BP-0005)
 - **[../tools/](../tools/)** — Implementation utilities (arche_compat_check.py, foundry-translate, foundry-deploy)
-- **[../modes/](../modes/)** — Detailed mode specifications and forms (3-layer, RL-loop, event-driven, agentic-swarm)
 - **[../examples/](../examples/)** — Usage examples and integration samples
 - **[../README.md](../README.md)** — Project overview and philosophy
 - **[../AI_QUICKSTART.md](../AI_QUICKSTART.md)** — Quick start guide for AI agents

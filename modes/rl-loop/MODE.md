@@ -23,7 +23,7 @@ The reinforcement learning loop mode enables agents to improve through experienc
 - Multiple agents coordinate without learning (→ agentic-swarm mode)
 - Event streams drive the architecture (→ event-driven mode)
 
-**Detailed comparison:** See [../../MODE_SELECTION.md](../../MODE_SELECTION.md) for comprehensive mode selection guidance.
+**Detailed comparison:** See [../MODE_SELECTION.md](../MODE_SELECTION.md) for comprehensive mode selection guidance.
 
 ## The Problem It Solves
 

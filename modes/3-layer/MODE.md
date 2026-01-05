@@ -28,7 +28,7 @@ The 3-layer mode maximizes reliability by separating concerns into three distinc
 - Your system is primarily event-driven (→ event-driven mode)
 - Agents need to learn from outcomes over time (→ rl-loop mode)
 
-**Detailed comparison:** See [MODE_SELECTION.md](../../MODE_SELECTION.md) for comprehensive mode selection guidance.
+**Detailed comparison:** See [../MODE_SELECTION.md](../MODE_SELECTION.md) for comprehensive mode selection guidance.
 
 ## The Problem It Solves
 

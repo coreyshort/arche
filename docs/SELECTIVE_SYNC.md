@@ -37,9 +37,9 @@ When you bootstrap with `--mode 3-layer --form automation`:
 - Other modes: `agentic-swarm/`, `event-driven/`, `rl-loop/`
 - Other forms within the same mode
 - Cross-mode documentation:
-  - `MODE_SELECTION.md`
-  - `MODE_MATURITY.md`
-  - `AUTONOMOUS_MODE_SELECTION.md`
+  - `modes/MODE_SELECTION.md`
+  - `modes/MODE_MATURITY.md`
+  - `modes/AUTONOMOUS_MODE_SELECTION.md`
   - `TELEMETRY.md`
   - Root `README.md`
 - Bootstrap tools
@@ -176,7 +176,7 @@ If your project needs to change modes:
 ## FAQ
 
 **Q: How do I reference MODE_SELECTION.md if it's not in my project?**  
-A: Via URL: `https://github.com/coreyshort/arche/blob/main/MODE_SELECTION.md`
+A: Via URL: `https://github.com/coreyshort/arche/blob/main/modes/MODE_SELECTION.md`
 
 **Q: What if I need to understand another mode?**  
 A: Reference its MODE.md via URL. AI agents can read URLs without copying files.

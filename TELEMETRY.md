@@ -161,7 +161,7 @@ cat .arche-telemetry
 ```
 
 **Understand maturity status:**
-See [MODE_MATURITY.md](MODE_MATURITY.md) for how telemetry informs maturity evolution.
+See [modes/MODE_MATURITY.md](modes/MODE_MATURITY.md) for how telemetry informs maturity evolution.
 
 ---
 
