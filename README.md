@@ -8,7 +8,7 @@
 
 **📋 Not sure where to start?** See [docs/getting-started/CHOOSE_YOUR_PATH.md](docs/getting-started/CHOOSE_YOUR_PATH.md) for a guided path selection
 
-**⬆️ Upgrading from v1.x?** See [MIGRATION_GUIDE.md](MIGRATION_GUIDE.md) — v2.0.0 is backwards compatible, no code changes needed
+**⬆️ Upgrading from v1.x or v2.0.0?** See [MIGRATION_GUIDE.md](MIGRATION_GUIDE.md) — v2.0.1 is backwards compatible, no code changes needed
 
 ---
 
