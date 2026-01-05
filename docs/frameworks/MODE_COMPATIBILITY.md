@@ -100,6 +100,15 @@ Event-Driven (event ingestion & routing)
    └─ Learning: Improve handling strategy over time
 ```
 
+---
+
+## See Also
+
+- [AGENT_ARCHETYPES.md](AGENT_ARCHETYPES.md) — Agent patterns for each mode
+- [MODE_MIGRATION_GUIDE.md](MODE_MIGRATION_GUIDE.md) — Transition between modes
+- [../../blueprints/](../../blueprints/) — Real-world examples using multiple modes
+- [../README.md](../README.md) — Documentation overview
+
 **Integration point:** Event-Driven routes events to RL-Loop policy; RL-Loop returns action + updates policy
 
 **Example:** Alert Monitor (Event-Driven) feeds alerts to Priority Optimizer (RL-Loop); learns what priority assignments work best

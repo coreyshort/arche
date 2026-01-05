@@ -102,6 +102,15 @@ This guide provides step-by-step migration paths for common transitions.
 
 ---
 
+## See Also
+
+- [MODE_COMPATIBILITY.md](MODE_COMPATIBILITY.md) — When/how to combine modes
+- [AGENT_ARCHETYPES.md](AGENT_ARCHETYPES.md) — Agent patterns for each mode
+- [../../blueprints/](../../blueprints/) — Real-world examples and migrations
+- [../README.md](../README.md) — Documentation overview
+
+---
+
 ### Pattern 2: 3-Layer → Agentic-Swarm (Add Specialization)
 
 **Trigger:** Single agent becomes too complex; sub-specialization improves quality

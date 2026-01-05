@@ -6,6 +6,8 @@
 
 **🤖 For AI Agents:** Start with [AI_QUICKSTART.md](AI_QUICKSTART.md) (2 min read, navigation map included)
 
+**📋 Not sure where to start?** See [docs/getting-started/CHOOSE_YOUR_PATH.md](docs/getting-started/CHOOSE_YOUR_PATH.md) for a guided path selection
+
 ---
 
 **arche** is named after the ancient Greek concept of *archē*—the first principle, origin, or underlying cause from which things come into being.

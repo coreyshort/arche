@@ -313,3 +313,13 @@ Example: "How we addressed RL-Loop convergence issues" (helpful for new teams im
 
 ---
 
+## See Also
+
+- [MODE_COMPATIBILITY.md](MODE_COMPATIBILITY.md) — Mode compatibility and integration patterns
+- [AGENT_ARCHETYPES.md](AGENT_ARCHETYPES.md) — Agent patterns affected by upgrades
+- [MODE_MIGRATION_GUIDE.md](MODE_MIGRATION_GUIDE.md) — Guidance for migrating between versions
+- [COMMUNITY_CONTRIBUTION_PATHWAY.md](COMMUNITY_CONTRIBUTION_PATHWAY.md) — How to propose improvements
+- [../README.md](../README.md) — Documentation overview
+
+---
+

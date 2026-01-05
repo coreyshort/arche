@@ -109,6 +109,16 @@
 
 ---
 
+## 🔗 Related Resources
+
+- [../blueprints/](../blueprints/) — Production-ready blueprint implementations
+- [../modes/](../modes/) — Architectural mode definitions and templates
+- [../arche-tools/](../arche-tools/) — CLI tools and automation scripts
+- [../examples/](../examples/) — Code examples and integration patterns
+- [../tools/](../tools/) — Additional utilities and helpers
+
+---
+
 ## 📊 Documentation Statistics
 
 - **4 doc folders** — Organized by use case

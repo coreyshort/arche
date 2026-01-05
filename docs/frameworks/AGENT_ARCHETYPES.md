@@ -72,6 +72,8 @@ Execute [procedure] reliably, handling errors gracefully.
 - Event-Driven: If triggered by events instead of scheduled
 - 3-Layer with RL-Loop wrapper: If success rate improves from feedback
 
+> **Note:** For mode compatibility guidance, see [MODE_COMPATIBILITY.md](MODE_COMPATIBILITY.md)
+
 ---
 
 ### 2. The Learner

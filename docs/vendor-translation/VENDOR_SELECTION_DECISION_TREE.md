@@ -437,3 +437,14 @@ def recommend_vendor(constraints):
 
 ---
 
+## See Also
+
+- [VENDOR_TRANSLATION_SPECIFICATION.md](VENDOR_TRANSLATION_SPECIFICATION.md) — Complete architecture and vendor specs
+- [VENDOR_INTEGRATION_GUIDE.md](VENDOR_INTEGRATION_GUIDE.md) — Step-by-step translation guide
+- [../frameworks/MODE_COMPATIBILITY.md](../frameworks/MODE_COMPATIBILITY.md) — Mode compatibility considerations
+- [../learning/](../learning/) — Setup feedback loops for vendor deployments
+- [../../blueprints/](../../blueprints/) — Real-world MAO examples to translate
+- [../README.md](../README.md) — Vendor translation documentation overview
+
+---
+

@@ -486,3 +486,13 @@ Questions? Ask in GitHub discussions or contact core team.
 
 ---
 
+## See Also
+
+- [MODE_COMPATIBILITY.md](MODE_COMPATIBILITY.md) — Mode patterns and integration
+- [AGENT_ARCHETYPES.md](AGENT_ARCHETYPES.md) — Archetype examples and patterns  
+- [MODE_MIGRATION_GUIDE.md](MODE_MIGRATION_GUIDE.md) — Mode transition patterns
+- [../../blueprints/](../../blueprints/) — Community-contributed blueprint examples
+- [../README.md](../README.md) — Documentation overview
+
+---
+

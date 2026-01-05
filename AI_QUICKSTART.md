@@ -26,6 +26,7 @@ You only get files for **your selected mode** - not everything.
 | If you need... | Read this... |
 |---|---|
 | Start new project | Run bootstrap.py (see above) |
+| Pick your learning path | [docs/getting-started/CHOOSE_YOUR_PATH.md](docs/getting-started/CHOOSE_YOUR_PATH.md) (5 min guided path) |
 | Choose a mode | [AUTONOMOUS_MODE_SELECTION.md](AUTONOMOUS_MODE_SELECTION.md) (8 questions, score-based) |
 | Understand a mode | `modes/{mode}/MODE.md` |
 | Configure AI assistant | `modes/{mode}/INSTRUCTIONS.md` |

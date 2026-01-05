@@ -71,7 +71,7 @@ Each blueprint includes:
 - Learning system architecture
 - SLA targets (where applicable)
 
-**Location:** `blueprint-registry.md` + individual BP-XXXX.md files
+**Location:** `../../blueprints/` folder with BP-0003.md, BP-0004.md, BP-0005.md files
 
 ### 5. Mode Migration Guide
 **Purpose:** Step-by-step patterns for evolving agents between modes
@@ -150,7 +150,7 @@ python ../../arche-tools/arche_compat_check.py --list
 ```
 User wants to build a Multi-Agent Organization
           ↓
-    Choose a blueprint (from blueprint-registry.md)
+    Choose a blueprint (from ../../blueprints/README.md)
     or design custom combination
           ↓
     Check compatibility (arche_compat_check.py)
@@ -182,8 +182,8 @@ User wants to build a Multi-Agent Organization
 ### Path 1: Use Existing Blueprint (Fastest)
 **Timeline:** 2-4 weeks to prototype
 
-1. **Choose blueprint:** Review `blueprint-registry.md` for your domain
-2. **Study blueprint:** Read full BP-XXXX.md file
+1. **Choose blueprint:** Review `../../blueprints/README.md` for your domain
+2. **Study blueprint:** Read full BP-XXXX.md file (e.g., BP-0003.md)
 3. **Set up learning loop:** Copy learning loop templates from `modes/foundry/examples/minimal-mao/`
 4. **Implement agents:** Use archetype templates from blueprint
 5. **Evaluate:** Run eval scenarios defined in blueprint
