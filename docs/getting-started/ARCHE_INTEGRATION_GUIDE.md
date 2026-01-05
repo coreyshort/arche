@@ -43,7 +43,7 @@ This guide explains what's new, how everything fits together, and how to use the
 - 6 anti-patterns to avoid
 - Migration paths for evolving agents
 
-**Location:** `MODE_COMPATIBILITY.md`
+**Location:** `../frameworks/MODE_COMPATIBILITY.md`
 
 ### 3. Agent Archetypes Library
 **Purpose:** Reusable agent patterns for common roles
@@ -53,7 +53,7 @@ This guide explains what's new, how everything fits together, and how to use the
 - Mode recommendations for each archetype
 - Real-world examples
 
-**Location:** `AGENT_ARCHETYPES.md`
+**Location:** `../frameworks/AGENT_ARCHETYPES.md`
 
 ### 4. Domain Blueprints
 **Purpose:** Production-ready MAO scaffolds for specific domains
@@ -87,7 +87,7 @@ Each migration includes:
 - Risk mitigation strategies
 - Rollback plans
 
-**Location:** `MODE_MIGRATION_GUIDE.md`
+**Location:** `../frameworks/MODE_MIGRATION_GUIDE.md`
 
 ### 6. Upgrade Advisory System
 **Purpose:** Safe, guided adoption of arche improvements
@@ -105,7 +105,7 @@ Each advisory includes:
 - Rollback risk assessment
 - Contact information
 
-**Location:** `UPGRADE_ADVISORIES.md` (registry + individual ADV-XXXX.md files)
+**Location:** `../frameworks/UPGRADE_ADVISORIES.md` (registry + individual ADV-XXXX.md files)
 
 **Tool Support:** Create `upgrades-log.md` in your MAO to track adopted advisories
 
@@ -125,7 +125,7 @@ Each advisory includes:
 4. Implementation review (1 week)
 5. Merge & release
 
-**Location:** `COMMUNITY_CONTRIBUTION_PATHWAY.md`
+**Location:** `../frameworks/COMMUNITY_CONTRIBUTION_PATHWAY.md`
 
 ### 8. Compatibility Checker Tool
 **Purpose:** Validate mode combinations before implementation
@@ -237,7 +237,7 @@ User wants to build a Multi-Agent Organization
 | **Track updates** | `UPGRADE_ADVISORIES.md` | New features & changes |
 | **Contribute** | `COMMUNITY_CONTRIBUTION_PATHWAY.md` | Extending arche |
 | **Validate combination** | `arche_compat_check.py` | Check before building |
-| **Understand framework improvements** | `FRAMEWORK_LEARNING_LOOP.md` | How arche improves |
+| **Understand framework improvements** | `../learning/FRAMEWORK_LEARNING_LOOP.md` | How arche improves |
 
 ---
 
@@ -251,7 +251,7 @@ arche is designed to improve continuously based on feedback from teams like your
 3. **Improve:** Create change requests, test with eval scenarios, deploy improvements
 4. **Share:** Monthly, submit feedback issues with `[FEEDBACK]` tag to help arche improve
 
-See `FEEDBACK_SPECIFICATION.md` for detailed templates and what metrics matter for your agent types.
+See `../learning/FEEDBACK_SPECIFICATION.md` for detailed templates and what metrics matter for your agent types.
 
 ### arche's Learning Loop (Quarterly)
 1. **Collect:** arche core team gathers feedback from all MAO teams and contributions
@@ -260,7 +260,7 @@ See `FEEDBACK_SPECIFICATION.md` for detailed templates and what metrics matter f
 4. **Share:** Release upgrades advisories, updated blueprints, new tools
 5. **Validate:** Teams adopt improvements, report back on effectiveness
 
-See `FRAMEWORK_LEARNING_LOOP.md` for how arche's quarterly cycle works and how your feedback shapes improvements.
+See `../learning/FRAMEWORK_LEARNING_LOOP.md` for how arche's quarterly cycle works and how your feedback shapes improvements.
 
 **The key:** Both your MAO and the framework improve together. Your feedback makes arche better for everyone. arche improvements make your MAO better through upgrades and new tools.
 
@@ -299,7 +299,7 @@ Create `mode-selection-log.md` in your MAO explaining:
 - When/how to revisit these decisions
 
 ### 6. Migrate Gradually
-When changing modes (3-Layer → RL-Loop), follow phased approach from `MODE_MIGRATION_GUIDE.md`. Don't switch all at once.
+When changing modes (3-Layer → RL-Loop), follow phased approach from `../frameworks/MODE_MIGRATION_GUIDE.md`. Don't switch all at once.
 
 ### 7. Monitor Compatibility
 As MAO grows, periodically re-run compatibility checker. New agents may create unexpected interactions.

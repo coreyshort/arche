@@ -257,20 +257,23 @@ Status: ✅ Ready for community implementation
 **Core Frameworks:**
 - MODE_COMPATIBILITY.md - 5×5 compatibility matrix
 - AGENT_ARCHETYPES.md - 8 reusable agent patterns
+**Frameworks:**
+- MODE_COMPATIBILITY.md - 5×5 compatibility matrix
+- AGENT_ARCHETYPES.md - 8 reusable agent patterns
 - MODE_MIGRATION_GUIDE.md - How to evolve between modes
 
 **Example MAOs (ready to translate):**
-- BP-0003-incident-response.md
-- BP-0004-content-moderation.md (see EXAMPLE_BP0004_TO_CLAUDE.md)
-- BP-0005-data-operations.md
+- ../blueprints/BP-0003-incident-response.md
+- ../blueprints/BP-0004-content-moderation.md (see examples/EXAMPLE_BP0004_TO_CLAUDE.md)
+- ../blueprints/BP-0005-data-operations.md
 
 **Feedback & Learning:**
-- FEEDBACK_SPECIFICATION.md - What to collect
-- FRAMEWORK_LEARNING_LOOP.md - How frameworks improve
+- ../learning/FEEDBACK_SPECIFICATION.md - What to collect
+- ../learning/FRAMEWORK_LEARNING_LOOP.md - How frameworks improve
 
 **Integration:**
-- ARCHE_INTEGRATION_GUIDE.md - Complete overview
-- QUICK_REFERENCE.md - One-page reference
+- ../getting-started/ARCHE_INTEGRATION_GUIDE.md - Complete overview
+- ../getting-started/QUICK_REFERENCE.md - One-page reference
 
 ---
 

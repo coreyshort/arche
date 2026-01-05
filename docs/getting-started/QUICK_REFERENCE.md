@@ -4,13 +4,13 @@
 
 | Component | Purpose | Key Content |
 |-----------|---------|-------------|
-| **MODE_COMPATIBILITY.md** | Safe mode combinations | 5×5 matrix, 9 patterns, anti-patterns |
-| **AGENT_ARCHETYPES.md** | Reusable agent patterns | 8 archetypes with templates & metrics |
-| **BP-0003, BP-0004, BP-0005** | Domain blueprints | Production-ready MAO scaffolds |
-| **MODE_MIGRATION_GUIDE.md** | Evolve agents safely | 3 migration patterns with phases |
-| **UPGRADE_ADVISORIES.md** | Safe ecosystem evolution | Advisory system + registry |
-| **COMMUNITY_CONTRIBUTION_PATHWAY.md** | Extend arche | RFC process for modes/archetypes/blueprints |
-| **arche_compat_check.py** | Validate combinations | CLI tool to check mode viability |
+| **../frameworks/MODE_COMPATIBILITY.md** | Safe mode combinations | 5×5 matrix, 9 patterns, anti-patterns |
+| **../frameworks/AGENT_ARCHETYPES.md** | Reusable agent patterns | 8 archetypes with templates & metrics |
+| **../blueprints/** | Domain blueprints | Production-ready MAO scaffolds |
+| **../frameworks/MODE_MIGRATION_GUIDE.md** | Evolve agents safely | 3 migration patterns with phases |
+| **../frameworks/UPGRADE_ADVISORIES.md** | Safe ecosystem evolution | Advisory system + registry |
+| **../frameworks/COMMUNITY_CONTRIBUTION_PATHWAY.md** | Extend arche | RFC process for modes/archetypes/blueprints |
+| **../tools/arche_compat_check.py** | Validate combinations | CLI tool to check mode viability |
 | **ARCHE_INTEGRATION_GUIDE.md** | Comprehensive overview | How everything connects |
 
 ---
