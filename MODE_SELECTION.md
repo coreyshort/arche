@@ -25,25 +25,29 @@ START: What's your primary requirement?
 │  └─ Reacting to streams, webhooks, messages?
 │     └─ 🚀 EVENT-DRIVEN MODE
 │
-└─ Learning & Adaptation
-   └─ System should improve from outcomes?
-      └─ 🚀 RL-LOOP MODE
+├─ Learning & Adaptation
+│  └─ System should improve from outcomes?
+│     └─ 🚀 RL-LOOP MODE
+│
+└─ Multi-Agent Scaffolding
+   └─ Need to bootstrap a multi-agent org?
+      └─ 🚀 FOUNDRY MODE
 ```
 
 ---
 
 ## Mode Comparison Matrix
 
-| Factor | 3-Layer | Agentic-Swarm | Event-Driven | RL-Loop |
-|--------|---------|---------------|--------------|---------|
-| **Maturity** | ✅ Mature | 🚀 Emerging | 🚀 Emerging | 🚀 Emerging |
-| **Predictability** | High | Medium | Medium | Low |
-| **Complexity** | Low-Medium | High | Medium | High |
-| **Learning Required** | Minimal | Significant | Moderate | Significant |
-| **Debugging Ease** | Easy | Challenging | Moderate | Challenging |
-| **Best Scale** | Small-Large | Medium-Large | Medium-Large | Any |
-| **Time to Production** | Fast | Slower | Medium | Slower |
-| **Iteration Speed** | Fast | Medium | Fast | Medium |
+| Factor | 3-Layer | Agentic-Swarm | Event-Driven | RL-Loop | Foundry |
+|--------|---------|---------------|--------------|---------|---------|
+| **Maturity** | ✅ Mature | 🚀 Emerging | 🚀 Emerging | 🚀 Emerging | 🚀 Emerging |
+| **Predictability** | High | Medium | Medium | Low | Medium |
+| **Complexity** | Low-Medium | High | Medium | High | High |
+| **Learning Required** | Minimal | Significant | Moderate | Significant | Moderate |
+| **Debugging Ease** | Easy | Challenging | Moderate | Challenging | Challenging |
+| **Best Scale** | Small-Large | Medium-Large | Medium-Large | Any | Any |
+| **Time to Production** | Fast | Slower | Medium | Slower | Slower |
+| **Iteration Speed** | Fast | Medium | Fast | Medium | Medium |
 
 ---
 
@@ -85,6 +89,45 @@ START: What's your primary requirement?
 - Requires upfront workflow definition
 - Single AI orchestrator (not multi-agent)
 - Not optimized for event streams
+
+---
+
+### 🚀 Foundry Mode
+
+**Choose When:**
+- ✅ Need to **bootstrap a multi-agent organization** quickly
+- ✅ Creating **self-learning multi-agent scaffolds**
+- ✅ Require **governance, eval, and feedback loops**
+- ✅ Building systems for **product mgmt, incident response, data ops, safety audits**
+- ✅ Want **templates + agent framework** pre-built
+
+**Avoid When:**
+- ❌ Only need a **single-agent directive**
+- ❌ Have a **small, fixed workflow** (use 3-Layer instead)
+- ❌ Need a **deterministic, predictable** system (use 3-Layer instead)
+- ❌ Don't need agents to **learn from outcomes**
+
+**Typical Projects:**
+- Multi-agent product management systems
+- Incident response coordinators
+- Data operations with specialized agents
+- Safety audit workflows
+- Meta-organizations with governance requirements
+- Systems that need self-improving agent scaffolds
+
+**Key Strengths:**
+- Rapidly scaffold multi-agent systems
+- Pre-built governance and feedback loops
+- Templates and patterns for learning systems
+- Self-contained under `modes/foundry/`
+- Can be published as standalone `foundry` repo later
+
+**Key Limitations:**
+- **Emerging maturity** - patterns still being refined
+- Requires understanding of multi-agent governance
+- More complex than single-agent modes
+- Learning from outcomes requires careful design
+- Not suitable for simple, deterministic workflows
 
 ---
 

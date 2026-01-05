@@ -74,7 +74,8 @@ def select_mode(requirements):
         "3-layer": 0,
         "agentic-swarm": 0,
         "event-driven": 0,
-        "rl-loop": 0
+        "rl-loop": 0,
+        "foundry": 0
     }
     
     # Score based on requirements
@@ -84,9 +85,11 @@ def select_mode(requirements):
         scores["agentic-swarm"] += 5
         scores["event-driven"] += 5
         scores["rl-loop"] += 5
+        scores["foundry"] += 5
     
     if requirements["multi_agent_needed"]:
         scores["agentic-swarm"] += 10
+        scores["foundry"] += 8
     else:
         scores["3-layer"] += 5
         scores["event-driven"] += 5
@@ -98,9 +101,11 @@ def select_mode(requirements):
         scores["3-layer"] += 5
         scores["agentic-swarm"] += 5
         scores["rl-loop"] += 5
+        scores["foundry"] += 5
     
     if requirements["learning_required"]:
         scores["rl-loop"] += 10
+        scores["foundry"] += 7
     else:
         scores["3-layer"] += 5
         scores["agentic-swarm"] += 5
@@ -112,6 +117,7 @@ def select_mode(requirements):
         scores["agentic-swarm"] += 5
         scores["event-driven"] += 5
         scores["rl-loop"] += 5
+        scores["foundry"] += 5
     
     if requirements["production_stability_critical"]:
         scores["3-layer"] += 10  # Mature
@@ -119,12 +125,15 @@ def select_mode(requirements):
         scores["agentic-swarm"] += 5  # Emerging
         scores["event-driven"] += 5
         scores["rl-loop"] += 5
+        scores["foundry"] += 5
     
     if requirements["complexity_tolerance"] == "high":
         scores["agentic-swarm"] += 5
         scores["rl-loop"] += 5
+        scores["foundry"] += 5
     elif requirements["complexity_tolerance"] == "medium":
         scores["event-driven"] += 5
+        scores["foundry"] += 3
     else:  # low
         scores["3-layer"] += 10
     
@@ -134,6 +143,7 @@ def select_mode(requirements):
     else:
         scores["agentic-swarm"] += 3
         scores["rl-loop"] += 3
+        scores["foundry"] += 3
     
     # Get mode with highest score
     selected_mode = max(scores.items(), key=lambda x: x[1])[0]

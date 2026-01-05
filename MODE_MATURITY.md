@@ -45,7 +45,7 @@ Arche modes progress through maturity stages based on real-world adoption, stabi
 
 **Guidance:** Safe for production use. Patterns are proven but ecosystem still growing.
 
-**Current modes:** agentic-swarm, event-driven, rl-loop
+**Current modes:** agentic-swarm, event-driven, foundry, rl-loop
 
 ---
 
