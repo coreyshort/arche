@@ -4,6 +4,12 @@ All notable changes to arche will be documented in this file.
 
 ## [2.0.0] - January 5, 2026
 
+### 📌 IMPORTANT: Backwards Compatible Release
+
+**This is a documentation-only upgrade.** No breaking changes. All v1.x projects continue working without any modifications.
+
+→ **For v1.x users:** See [MIGRATION_GUIDE.md](MIGRATION_GUIDE.md) for upgrade information (spoiler: no action needed to keep working, but you'll want the docs improvements)
+
 ### 🎉 Major Improvements
 
 - **Cross-Folder Navigation:** All documentation sections now interconnected with "See Also" sections for seamless navigation between frameworks, vendor-translation, and learning docs
@@ -18,6 +24,7 @@ All notable changes to arche will be documented in this file.
 - Related Resources section added to docs/README.md
 - Blueprint placeholders created (BP-0003, BP-0004, BP-0005) with "Coming Soon" status
 - Enhanced AI agent navigation guidance in AI_QUICKSTART.md
+- New MIGRATION_GUIDE.md for upgrading from v1.x
 
 ### 🔧 Improvements
 

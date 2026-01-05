@@ -9,6 +9,7 @@
 | Your Goal | Start Here | Time |
 |-----------|-----------|------|
 | **I'm an AI agent** | [../AI_QUICKSTART.md](../AI_QUICKSTART.md) | 2 min |
+| **Upgrading from v1.x?** | [../MIGRATION_GUIDE.md](../MIGRATION_GUIDE.md) | 5 min |
 | **Not sure where to start?** | [getting-started/CHOOSE_YOUR_PATH.md](getting-started/CHOOSE_YOUR_PATH.md) | 5 min |
 | **Choose a mode** | [../modes/MODE_SELECTION.md](../modes/MODE_SELECTION.md) | 15 min |
 | **Brand new to arche** | [getting-started/QUICK_REFERENCE.md](getting-started/QUICK_REFERENCE.md) | 5 min |
