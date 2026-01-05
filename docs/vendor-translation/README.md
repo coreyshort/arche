@@ -100,9 +100,9 @@ Executive overview and roadmap
 
 ✅ Specification complete  
 ✅ Integration guide complete  
-✅ Examples: 3 of 6 complete (Claude, Copilot Studio, LangGraph)
+✅ Examples: 4 of 6 complete (Claude, Copilot Studio, LangGraph, OpenAI Swarm)
 🚀 Ready for Phase 1 implementation (foundry-translate CLI)
-⏳ Pending: Gemini, OpenAI Swarm, AutoGen examples
+⏳ Pending: Gemini, AutoGen examples
 
 ---
 

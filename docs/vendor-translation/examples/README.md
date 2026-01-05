@@ -92,12 +92,40 @@
 
 ---
 
+#### 4. OpenAI Swarm (Deterministic, Lightweight)
+
+**File:** [EXAMPLE_BP0004_TO_SWARM.md](EXAMPLE_BP0004_TO_SWARM.md)
+
+**What:** Full translation of BP-0004 (Content Moderation) to OpenAI Swarm
+
+**Best for:**
+- Deterministic workflows with clear routing
+- Lightweight, simple deployments
+- Systems where predictability matters
+- API-based implementations
+- Clear hand-off patterns
+
+**Covers:**
+- Agent definitions with clear responsibilities
+- Tool binding and implementation
+- Hand-off functions and routing logic
+- Orchestration with message-based flow
+- Error handling and edge cases
+- Learning feedback integration
+- Weekly analytics jobs
+- Practical testing patterns
+
+**Time to read:** 45-60 minutes  
+**Complexity:** Intermediate  
+**Deployment components:** Python app + Anthropic/OpenAI API
+
+---
+
 ### 🚀 Planned Examples
 
 | Vendor | Status | Focus |
 |--------|--------|-------|
 | **Google Gemini** | Planned | Multimodal agents, fast inference |
-| **OpenAI Swarm** | Planned | Deterministic routing, simpler flows |
 | **AutoGen** | Planned | Distributed coordination, resilience |
 
 ---
@@ -234,6 +262,6 @@ To add a new vendor example:
 
 ---
 
-**Status:** 3 of 6 examples complete  
+**Status:** 4 of 6 examples complete  
 **Last Updated:** January 5, 2026  
 **Target Completion:** Q1 2026
