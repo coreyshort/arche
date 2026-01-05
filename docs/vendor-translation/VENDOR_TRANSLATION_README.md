@@ -263,9 +263,9 @@ Status: ✅ Ready for community implementation
 - MODE_MIGRATION_GUIDE.md - How to evolve between modes
 
 **Example MAOs (ready to translate):**
-- ../blueprints/BP-0003-incident-response.md
-- ../blueprints/BP-0004-content-moderation.md (see examples/EXAMPLE_BP0004_TO_CLAUDE.md)
-- ../blueprints/BP-0005-data-operations.md
+- ../../blueprints/BP-0003-incident-response.md
+- ../../blueprints/BP-0004-content-moderation.md (see examples/EXAMPLE_BP0004_TO_CLAUDE.md)
+- ../../blueprints/BP-0005-data-operations.md
 
 **Feedback & Learning:**
 - ../learning/FEEDBACK_SPECIFICATION.md - What to collect

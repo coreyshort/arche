@@ -132,8 +132,8 @@ Each advisory includes:
 
 **Usage:**
 ```bash
-python arche-tools/arche_compat_check.py --modes 3-layer rl-loop agentic-swarm
-python arche-tools/arche_compat_check.py --list
+python ../../arche-tools/arche_compat_check.py --modes 3-layer rl-loop agentic-swarm
+python ../../arche-tools/arche_compat_check.py --list
 ```
 
 **Output:**

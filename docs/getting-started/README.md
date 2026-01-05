@@ -7,14 +7,12 @@
 ## 📚 Quick Navigation
 
 | Your Role | Start Here |
-|-----------|-----------|
+|-----------|-----------|  
 | **New to arche** | QUICK_REFERENCE.md |
 | **Understanding architecture** | ARCHE_INTEGRATION_GUIDE.md |
 | **Translating to vendors** | ../vendor-translation/README.md |
-| **Building a MAO** | ../blueprints/README.md |
-| **Done with arche 2.0** | COMPLETION_SUMMARY.md |
-
----
+| **Building a MAO** | ../../blueprints/README.md |
+| **Done with arche 2.0** | COMPLETION_SUMMARY.md |---
 
 ## 🎯 What is arche?
 
@@ -109,7 +107,7 @@ Read: ARCHE_INTEGRATION_GUIDE.md
 **Frameworks:** frameworks/
 - 4 modes, 8 agent types, 9 pairing patterns
 
-**Blueprints:** ../blueprints/
+**Blueprints:** ../../blueprints/
 - 3 production-ready MAO examples
 
 **Vendor Translation:** ../vendor-translation/
